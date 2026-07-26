@@ -1,0 +1,232 @@
+<section class="cs-hero new">
+    <!-- <div class="cs-hero-img"
+        style="background-image: url(&quot;/static/growth-collective-hero-7c6740fa16aa800dbf5138f7141c0058.png&quot;);">
+    </div> -->
+    <div class="container">
+        <div class="cs-hero-wrapper">
+            <div class="breadcrumbs">
+                <a href="/" class="breadcrumbs-link"><svg class="breadcrumbs-homeIcon"
+                        xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
+                        <path
+                            d="M11.3334 4.33334L7.3334 0.826671C6.96671 0.498701 6.49202 0.317383 6.00006 0.317383C5.50811 0.317383 5.03341 0.498701 4.66673 0.826671L0.66673 4.33334C0.454975 4.52272 0.285997 4.75504 0.171044 5.01483C0.0560923 5.27463 -0.00219504 5.55593 6.31961e-05 5.84V11.6667C6.31961e-05 12.1971 0.210777 12.7058 0.58585 13.0809C0.960922 13.456 1.46963 13.6667 2.00006 13.6667H10.0001C10.5305 13.6667 11.0392 13.456 11.4143 13.0809C11.7893 12.7058 12.0001 12.1971 12.0001 11.6667V5.83334C12.0014 5.55038 11.9426 5.27036 11.8277 5.01179C11.7128 4.75322 11.5443 4.52198 11.3334 4.33334ZM7.3334 12.3333H4.66673V9C4.66673 8.82319 4.73697 8.65362 4.86199 8.5286C4.98702 8.40358 5.15658 8.33334 5.3334 8.33334H6.66673C6.84354 8.33334 7.01311 8.40358 7.13813 8.5286C7.26316 8.65362 7.3334 8.82319 7.3334 9V12.3333ZM10.6667 11.6667C10.6667 11.8435 10.5965 12.0131 10.4715 12.1381C10.3464 12.2631 10.1769 12.3333 10.0001 12.3333H8.66673V9C8.66673 8.46957 8.45602 7.96086 8.08094 7.58579C7.70587 7.21072 7.19716 7 6.66673 7H5.3334C4.80296 7 4.29426 7.21072 3.91918 7.58579C3.54411 7.96086 3.3334 8.46957 3.3334 9V12.3333H2.00006C1.82325 12.3333 1.65368 12.2631 1.52866 12.1381C1.40363 12.0131 1.3334 11.8435 1.3334 11.6667V5.83334C1.33352 5.73868 1.35379 5.64514 1.39287 5.55892C1.43196 5.47271 1.48895 5.39581 1.56006 5.33334L5.56006 1.83334C5.68172 1.72646 5.83812 1.66751 6.00006 1.66751C6.162 1.66751 6.3184 1.72646 6.44006 1.83334L10.4401 5.33334C10.5112 5.39581 10.5682 5.47271 10.6073 5.55892C10.6463 5.64514 10.6666 5.73868 10.6667 5.83334V11.6667Z"
+                            fill="#98A4B3"></path>
+                    </svg>
+                </a>
+                <a href="/portfolio" class="breadcrumbs-link">Portfolio</a>
+                <a href="/case-study/growth-collective" class="breadcrumbs-link breadcrumbs-link_dark">Propertease</a>
+            </div>
+            <h1 class="cs-hero__title h1">
+                {{ project.hero.title }}
+            </h1>
+            <div class="cs-hero-pills-list">
+                <!-- <div class="cs-hero-pills-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.3 8.59L19.21 7.69C19.3983 7.5017 19.5041 7.2463 19.5041 6.98C19.5041 6.7137 19.3983 6.4583 19.21 6.27C19.0217 6.0817 18.7663 5.97591 18.5 5.97591C18.2337 5.97591 17.9783 6.0817 17.79 6.27L16.89 7.18C15.4886 6.09585 13.7669 5.50764 11.995 5.50764C10.2232 5.50764 8.50147 6.09585 7.10003 7.18L6.19003 6.26C6.0004 6.0717 5.74373 5.96644 5.47649 5.96737C5.20925 5.96831 4.95333 6.07537 4.76503 6.265C4.57672 6.45463 4.47146 6.7113 4.4724 6.97854C4.47334 7.24578 4.5804 7.5017 4.77003 7.69L5.69003 8.6C4.59304 9.99755 3.99782 11.7233 4.00003 13.5C3.99676 14.7754 4.29849 16.0331 4.88005 17.1683C5.46161 18.3034 6.30614 19.283 7.34322 20.0254C8.38029 20.7679 9.57985 21.2516 10.8418 21.4362C12.1038 21.6208 13.3917 21.5011 14.598 21.0869C15.8043 20.6727 16.8941 19.9761 17.7764 19.0552C18.6588 18.1342 19.3082 17.0157 19.6705 15.7928C20.0328 14.5699 20.0974 13.2781 19.859 12.0251C19.6206 10.7722 19.0861 9.5944 18.3 8.59ZM12 19.5C10.8133 19.5 9.6533 19.1481 8.6666 18.4888C7.67991 17.8295 6.91087 16.8925 6.45675 15.7961C6.00262 14.6997 5.8838 13.4933 6.11531 12.3295C6.34683 11.1656 6.91827 10.0965 7.75739 9.25736C8.5965 8.41824 9.6656 7.8468 10.8295 7.61529C11.9934 7.38378 13.1998 7.5026 14.2961 7.95672C15.3925 8.41085 16.3296 9.17988 16.9888 10.1666C17.6481 11.1533 18 12.3133 18 13.5C18 15.0913 17.3679 16.6174 16.2427 17.7426C15.1174 18.8679 13.5913 19.5 12 19.5ZM10 4.5H14C14.2652 4.5 14.5196 4.39464 14.7071 4.20711C14.8947 4.01957 15 3.76522 15 3.5C15 3.23478 14.8947 2.98043 14.7071 2.79289C14.5196 2.60536 14.2652 2.5 14 2.5H10C9.73481 2.5 9.48046 2.60536 9.29292 2.79289C9.10538 2.98043 9.00003 3.23478 9.00003 3.5C9.00003 3.76522 9.10538 4.01957 9.29292 4.20711C9.48046 4.39464 9.73481 4.5 10 4.5ZM13 10.5C13 10.2348 12.8947 9.98043 12.7071 9.79289C12.5196 9.60536 12.2652 9.5 12 9.5C11.7348 9.5 11.4805 9.60536 11.2929 9.79289C11.1054 9.98043 11 10.2348 11 10.5V12.39C10.7736 12.5925 10.614 12.859 10.5423 13.1542C10.4707 13.4495 10.4904 13.7595 10.5988 14.0433C10.7072 14.3271 10.8992 14.5712 11.1494 14.7435C11.3996 14.9158 11.6962 15.008 12 15.008C12.3038 15.008 12.6004 14.9158 12.8507 14.7435C13.1009 14.5712 13.2929 14.3271 13.4013 14.0433C13.5097 13.7595 13.5294 13.4495 13.4577 13.1542C13.3861 12.859 13.2265 12.5925 13 12.39V10.5Z"
+                            fill="#1780FF"></path>
+                    </svg>
+                    <span class="cs-hero-pills-item__text">2022 - 2024</span>
+                </div> -->
+                <div class="cs-hero-pills-item">
+                    <p class="country-flag usa m-0">{{ project.hero.country }}</p>
+                </div>
+                <div class="cs-hero-pills-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.32 9.55L19.43 8.92L20.32 7.14C20.4102 6.95369 20.4404 6.74397 20.4064 6.53978C20.3723 6.33558 20.2758 6.14699 20.13 6L18 3.87C17.8522 3.72209 17.6618 3.62421 17.4555 3.59013C17.2493 3.55605 17.0375 3.58748 16.85 3.68L15.07 4.57L14.44 2.68C14.3735 2.483 14.2472 2.31163 14.0787 2.18975C13.9102 2.06787 13.7079 2.00155 13.5 2H10.5C10.2904 1.99946 10.0858 2.06482 9.91537 2.18685C9.7449 2.30887 9.61709 2.48138 9.55 2.68L8.92 4.57L7.14 3.68C6.95369 3.58978 6.74397 3.55961 6.53978 3.59364C6.33558 3.62767 6.14699 3.72423 6 3.87L3.87 6C3.72209 6.14777 3.62421 6.33818 3.59013 6.54446C3.55605 6.75074 3.58748 6.96251 3.68 7.15L4.57 8.93L2.68 9.56C2.483 9.62654 2.31163 9.75283 2.18975 9.92131C2.06787 10.0898 2.00155 10.2921 2 10.5V13.5C1.99946 13.7096 2.06482 13.9142 2.18685 14.0846C2.30887 14.2551 2.48138 14.3829 2.68 14.45L4.57 15.08L3.68 16.86C3.58978 17.0463 3.55961 17.256 3.59364 17.4602C3.62767 17.6644 3.72423 17.853 3.87 18L6 20.13C6.14777 20.2779 6.33818 20.3758 6.54446 20.4099C6.75074 20.444 6.96251 20.4125 7.15 20.32L8.93 19.43L9.56 21.32C9.62709 21.5186 9.7549 21.6911 9.92537 21.8132C10.0958 21.9352 10.3004 22.0005 10.51 22H13.51C13.7196 22.0005 13.9242 21.9352 14.0946 21.8132C14.2651 21.6911 14.3929 21.5186 14.46 21.32L15.09 19.43L16.87 20.32C17.0551 20.4079 17.2628 20.4369 17.4649 20.4029C17.667 20.3689 17.8538 20.2737 18 20.13L20.13 18C20.2779 17.8522 20.3758 17.6618 20.4099 17.4555C20.444 17.2493 20.4125 17.0375 20.32 16.85L19.43 15.07L21.32 14.44C21.517 14.3735 21.6884 14.2472 21.8103 14.0787C21.9321 13.9102 21.9985 13.7079 22 13.5V10.5C22.0005 10.2904 21.9352 10.0858 21.8132 9.91537C21.6911 9.7449 21.5186 9.61709 21.32 9.55ZM20 12.78L18.8 13.18C18.5241 13.2695 18.2709 13.418 18.0581 13.6151C17.8452 13.8122 17.6778 14.0533 17.5675 14.3216C17.4571 14.5899 17.4064 14.879 17.419 15.1688C17.4315 15.4586 17.5069 15.7422 17.64 16L18.21 17.14L17.11 18.24L16 17.64C15.7436 17.5122 15.4627 17.4411 15.1763 17.4313C14.89 17.4215 14.6049 17.4734 14.3403 17.5834C14.0758 17.6934 13.8379 17.8589 13.6429 18.0688C13.4479 18.2787 13.3003 18.5281 13.21 18.8L12.81 20H11.22L10.82 18.8C10.7305 18.5241 10.582 18.2709 10.3849 18.0581C10.1878 17.8452 9.94671 17.6778 9.67842 17.5675C9.41014 17.4571 9.12105 17.4064 8.83123 17.419C8.5414 17.4315 8.25777 17.5069 8 17.64L6.86 18.21L5.76 17.11L6.36 16C6.4931 15.7422 6.56852 15.4586 6.58105 15.1688C6.59358 14.879 6.5429 14.5899 6.43254 14.3216C6.32218 14.0533 6.15478 13.8122 5.94195 13.6151C5.72912 13.418 5.47595 13.2695 5.2 13.18L4 12.78V11.22L5.2 10.82C5.47595 10.7305 5.72912 10.582 5.94195 10.3849C6.15478 10.1878 6.32218 9.94671 6.43254 9.67842C6.5429 9.41014 6.59358 9.12105 6.58105 8.83123C6.56852 8.5414 6.4931 8.25777 6.36 8L5.79 6.89L6.89 5.79L8 6.36C8.25777 6.4931 8.5414 6.56852 8.83123 6.58105C9.12105 6.59358 9.41014 6.5429 9.67842 6.43254C9.94671 6.32218 10.1878 6.15478 10.3849 5.94195C10.582 5.72912 10.7305 5.47595 10.82 5.2L11.22 4H12.78L13.18 5.2C13.2695 5.47595 13.418 5.72912 13.6151 5.94195C13.8122 6.15478 14.0533 6.32218 14.3216 6.43254C14.5899 6.5429 14.879 6.59358 15.1688 6.58105C15.4586 6.56852 15.7422 6.4931 16 6.36L17.14 5.79L18.24 6.89L17.64 8C17.5122 8.25645 17.4411 8.53735 17.4313 8.82369C17.4215 9.11003 17.4734 9.39513 17.5834 9.65969C17.6934 9.92424 17.8589 10.1621 18.0688 10.3571C18.2787 10.5521 18.5281 10.6997 18.8 10.79L20 11.19V12.78ZM12 8C11.2089 8 10.4355 8.2346 9.77772 8.67413C9.11993 9.11365 8.60724 9.73836 8.30448 10.4693C8.00173 11.2002 7.92252 12.0044 8.07686 12.7804C8.2312 13.5563 8.61217 14.269 9.17158 14.8284C9.73099 15.3878 10.4437 15.7688 11.2196 15.9231C11.9956 16.0775 12.7998 15.9983 13.5307 15.6955C14.2616 15.3928 14.8864 14.8801 15.3259 14.2223C15.7654 13.5645 16 12.7911 16 12C16 10.9391 15.5786 9.92172 14.8284 9.17158C14.0783 8.42143 13.0609 8 12 8ZM12 14C11.6044 14 11.2178 13.8827 10.8889 13.6629C10.56 13.4432 10.3036 13.1308 10.1522 12.7654C10.0009 12.3999 9.96126 11.9978 10.0384 11.6098C10.1156 11.2219 10.3061 10.8655 10.5858 10.5858C10.8655 10.3061 11.2219 10.1156 11.6098 10.0384C11.9978 9.96126 12.3999 10.0009 12.7654 10.1522C13.1308 10.3036 13.4432 10.56 13.6629 10.8889C13.8827 11.2178 14 11.6044 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14Z"
+                            fill="#1780FF"></path>
+                    </svg>
+                    <span class="cs-hero-pills-item__text">Angular js, .Net, SQL Server, AWS</span>
+                </div>
+            </div>
+            <p class="cs-hero__description">{{ project.hero.description }}</p>
+        </div>
+    </div>
+</section>
+<section class="cs-challenge cs-challenge_darker cs-challenge_lange new" *ngIf="project.client_and_challenge.title">
+    <div class="container">
+        <div class="cs-challenge-wrp">
+            <!-- <div class="cs-challenge-inner"> -->
+            <div class="text-center">
+                <div class="mb-32">
+                    <!-- <span>01</span> -->
+                    <h2 class="cs-challenge-title__item h2">{{ project.client_and_challenge.title }}</h2>
+                </div>
+                <p class="cs-challenge__text">{{ project.client_and_challenge.description }}</p>
+            </div>
+            <!-- <div class="cs-challenge-img">
+                <img [ngSrc]="project?.client_and_challenge?.image" width="756" height="562"
+                    alt="device with a project example">
+            </div> -->
+        </div>
+    </div>
+</section>
+<section class="cs-challenge cs-challenge_truly-2 new">
+    <div class="container">
+        <div class="cs-challenge-wrp  cs-challenge-wrp_reverse">
+            <div class="cs-challenge-inner">
+                <div class="cs-challenge-title">
+                    <!-- <span>02</span> -->
+                    <h2 class="cs-challenge-title__item h2">{{ project.solution.title }}</h2>
+                </div>
+                <p class="cs-challenge__text">{{ project.solution.description }}</p>
+            </div>
+            <div class="cs-challenge-img">
+                <img [ngSrc]="project.solution?.image" width="657" height="455" alt="device with a project example">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cs-func cs-func_csc new">
+    <div class="container">
+        <div class="cs-challenge-title">
+            <!-- <span>03</span> -->
+            <h2 class="cs-challenge-title__item h2">{{ project.feature.title }}</h2>
+        </div>
+        <ul class="cs-func-list">
+            <li class="cs-func-item" *ngFor="let item of project.feature.points; index as i">
+                <!-- <li> -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 11L12 14L22 4" stroke="#1780FF" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path
+                        d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+                        stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>{{item.title}}: {{item.description}}</span>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="services-cards new">
+    <div class="container">
+        <h2 class="services-cards__title h3">{{project.services.title}}</h2>
+        <ul class="services-cards-list">
+            <!-- <li class="services-cards-item"> -->
+            <li class="services-cards-item" *ngFor="let item of project.services.description">
+                <i class="fa-solid fa-diagram-project" [class]="'first second'"></i>
+                <p class="services-cards-item__title">{{item.text}}</p>
+            </li>
+            <!-- <li class="services-cards-item">
+                <i class="fa-solid fa-server"></i>
+                <p class="services-cards-item__title">Front-End Development</p>
+            </li>
+            <li class="services-cards-item">
+                <i class="fa-solid fa-gears"></i>
+                <p class="services-cards-item__title">Back-End Development</p>
+            </li>
+            <li class="services-cards-item">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <p class="services-cards-item__title">QA Services</p>
+            </li>
+            <li class="services-cards-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p class="services-cards-item__title">Infrastructure Setup</p>
+            </li> -->
+        </ul>
+    </div>
+</section>
+
+
+
+
+<!-- 
+
+            <li class="cs-func-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 11L12 14L22 4" stroke="#1780FF" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path
+                        d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+                        stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Tenant Portal:
+
+                    Tenants can browse available properties using search and filtering options to find homes that match
+                    their requirements. Once they find a suitable property, they can contact the landlord directly
+                    through the application.
+
+                    After a property is approved, the rental agreement is generated within the platform, allowing both
+                    parties to keep all important documents in one secure location. Tenants also receive reminders for
+                    rent payments and other important updates related to their tenancy.</span>
+            </li>
+<li class="cs-func-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 11L12 14L22 4" stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+        <path
+            d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+            stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span>Admin panel with full management cycle</span>
+</li>
+<li class="cs-func-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 11L12 14L22 4" stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+        <path
+            d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+            stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span>Platform deployment</span>
+</li>
+<li class="cs-func-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 11L12 14L22 4" stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+        <path
+            d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+            stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span>Service Provider Portal
+
+        The platform includes a dedicated space for service providers such as plumbers, electricians,
+        painters, cleaners, and other maintenance professionals.
+
+        Service providers can register their business, manage their profile, and become available for
+        maintenance requests submitted by landlords or tenants. This creates a simple way to connect
+        property owners with trusted professionals whenever repairs or maintenance are required.</span>
+</li>
+<li class="cs-func-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 11L12 14L22 4" stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+        <path
+            d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+            stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span>Notification System:
+
+        A built in notification system keeps users informed about important events throughout the
+        application. Users receive updates for rent due dates, agreement status, maintenance requests, new
+        messages, and other activities that require attention. This reduces missed payments and improves
+        communication between all parties.</span>
+</li>
+<li class="cs-func-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 11L12 14L22 4" stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+        <path
+            d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+            stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span>Payment module with Stripe integration and automated charging possibility, multiple payment
+        options for different payment types, supporting relevant tax forms, and custom invoicing
+        solutions
+    </span>
+</li>
+<li class="cs-func-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 11L12 14L22 4" stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+        <path
+            d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+            stroke="#1780FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span>Outcome:
+
+        The Property Management Platform provides a complete digital solution for property rentals by
+        bringing landlords, tenants, and service providers into a single ecosystem. From property discovery
+        and tenant communication to agreement generation, rent management, and maintenance services, the
+        platform streamlines the entire rental experience while reducing manual work and improving
+        transparency.</span>
+</li> -->

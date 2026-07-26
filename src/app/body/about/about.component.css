@@ -1,0 +1,67 @@
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+.grid {
+  display: grid;
+}
+.relative {
+  position: relative;
+}
+.md\:pr-12 {
+  padding-right: 3rem;
+}
+.md\:pl-0 {
+  padding-left: 0px;
+}
+
+.md\:-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.md\:left-1\/2 {
+  left: 50%;
+}
+
+.bg-border {
+  background-color: #00e7ff;
+}
+.w-px {
+  width: 1px;
+}
+.top-0 {
+  top: 0px;
+}
+.absolute {
+  position: absolute;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+
+.timeline-dot {
+  box-shadow: var(--shadow-glow);
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: #00315e;
+  border-radius: 9999px;
+  margin-left: -5px;
+}
+
+.md\:text-right {
+  text-align: right;
+}
+
+.md\:pl-12 {
+  padding-left: 3rem;
+}
+
+.md\:order-2 {
+  order: 2;
+}

@@ -1,0 +1,336 @@
+<section class="home-hero">
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile-box">
+                <h1>About Me </h1>
+                <h3 class="fs-22">I'm a passionate Backend Developer and Data Engineer who loves turning complex
+                    problems into
+                    scalable solutions.</h3>
+                <!-- <p>Backend Engineer with 5+ years of experience delivering scalable, data-driven web platforms using
+                    Node.js and .Net technologies. Specialized in Node.js, JavaScript, Typescript, Redis, and Angular, with
+                    experience
+                    deploying complex systems into production environments. Skilled in REST and GraphQL API
+                    interface, and building user-centric web apps with Angular. Proven track record in working with
+                    crossfunctional
+                    teams, optimizing backend performance, and delivering business-focused features.
+                </p> -->
+                <p>
+                    Backend Engineer with 4+ years of experience building production systems with Node.js and .NET.
+                    Also work with Angular on the frontend. I've built REST and GraphQL APIs, deployed
+                    on AWS, and worked closely with product and QA teams to push features on production servers.
+                    Interested
+                    in backend performance, clean API design, and scalable systems.
+                </p>
+                <app-anchor cssclass="button mr-10" routerlink="/contact" label="Get in touch"></app-anchor>
+                <a class="button" for="contact-form-popup-checkbox"
+                    href="../../../assets/pdf/BackendEngineer-AmmarYaqoob.pdf" download>Download Resume</a>
+            </div>
+            <div class="profile-box">
+                <img alt="Ammar Yaqoob" class="rounded-1" src="./assets/images/Ammar-2.jpeg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="get new p-t-100 p-b-100 get_white-tiles get_title-left get_no-hover">
+    <div class="container">
+        <h2 class="speciality-title h3 m-16">What I Do</h2>
+        <p class="text-main speciality-subtitle">
+            I work across the stack from frontend interfaces to REST and GraphQL services on the backend.
+            Whether it's a UI feature or an internal API, I care about clean, readable code. I like the parts
+            where frontend and backend meet, and try to design APIs that make both sides simpler to build.
+        </p>
+        <!-- <p class="text-main speciality-subtitle">
+            From frontend interfaces to backend systems, I possess the skills
+            to build end-to-end solutions that meet the unique needs of each project. With a passion for technology
+            and a commitment to excellence, I am dedicated to delivering impactful solutions that drive business
+            success and innovation.
+        </p> -->
+        <div class="">
+            <div class="row">
+                <div class="col-md-3" *ngFor="let d of data">
+                    <app-card-list [cards]="d"></app-card-list>
+                </div>
+                <!-- <div class="col-md-3">
+                    <app-card-list></app-card-list>
+                </div>
+                <div class="col-md-3">
+                    <app-card-list></app-card-list>
+                </div>
+                <div class="col-md-3">
+                    <app-card-list></app-card-list>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>
+<section id="experience" class="p-t-100 p-b-100">
+    <div class="container">
+        <div style="opacity: 1; transform: none;">
+            <h3 class="text-3xl md:text-4xl font-bold mb-12">Where I've Worked</h3>
+            <div class="relative">
+                <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2"></div>
+                <div class="space-y-12">
+                    <div class="relative grid md:grid-cols-2 gap-8" style="opacity: 1; transform: none;">
+                        <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 timeline-dot"></div>
+                        <div class="pl-8 md:pl-0 md:pr-12">
+                            <span class="font-mono text-sm text-primary">01/2022 – 10/2024</span>
+                            <h4 class="text-xl font-semibold mt-1">Backend &amp; Cloud Engineer</h4>
+                            <p class="text-muted-foreground mb-4">Regtify</p>
+                            <ul class="space-y-2 ">
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Developed and maintained multi-tenant regulatory reporting
+                                        platforms, supporting over 500k API requests
+                                        daily.</span>
+                                </li>
+                                <!-- <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Built backend solution using Node.js with SQL database
+                                        integration, handling over 100k API calls per day</span>
+                                </li> -->
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Designed
+                                        and optimized SQL Server databases, improving query performance by 25% and
+                                        decrease database load time.</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Deployed server less features on AWS Lambda and managed data
+                                        pipelines using Dynamo DB and S3.</span>
+                                </li>
+                                <!-- <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Increased
+                                        frontend performance by 43% by optimizing asset delivery and SSR
+                                        rendering</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Development
+                                        of
+                                        dynamic and responsive user interfaces using Angular</span>
+                                </li> -->
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Enforced
+                                        CI/CD
+                                        pipelines with GitHub Actions, Docker, and ECS for zero-downtime
+                                        releases.</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Applied
+                                        Git
+                                        workflows and management for version control.</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span
+                                        class="text-left">Established
+                                        unit and E2E testing frameworks.</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span
+                                        class="text-left">Collaborate
+                                        with a cross functional team.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden md:block md:order-2"></div>
+                    </div>
+                    <div class="relative grid md:grid-cols-2 gap-8" style="opacity: 1; transform: none;">
+                        <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 timeline-dot"></div>
+                        <div class="pl-8 md:pl-0 md:order-2 md:pl-12">
+                            <span class="font-mono text-sm text-primary">09/2020 – 12/2021</span>
+                            <h4 class="text-xl font-semibold mt-1">Backend Engineer</h4>
+                            <p class="text-muted-foreground mb-4">Aimviz</p>
+                            <ul class="space-y-2 md:list-inside">
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Created
+                                        secure
+                                        APIs for 3rd-party integrations and improved async background jobs.</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Integrated RESTful api services.</span>
+                                    <!-- </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Redesigned
+                                        legacy web apps using Angular, enhancing performance and UX for 80k monthly
+                                        users.</span>
+                                </li> -->
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Used Jira and Git-based workflows for task management,
+                                        version control, and agile development pro-
+                                        cesses.</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Built
+                                        backend service responsible for handling over 100k API
+                                        calls per day.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+                    <div class="relative grid md:grid-cols-2 gap-8" style="opacity: 1; transform: none;">
+                        <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 timeline-dot"></div>
+                        <div class="pl-8 md:pl-0 md:pr-12">
+                            <span class="font-mono text-sm text-primary">03/2020 – 08/2020</span>
+                            <h4 class="text-xl font-semibold mt-1">Internship</h4>
+                            <p class="text-muted-foreground mb-4">Blueex</p>
+                            <ul class="space-y-2 ">
+                                <!-- <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Built
+                                        backend
+                                        solution using Node.js with SQL database integration, handling over 100k API
+                                        calls
+                                        per day</span>
+                                </li> 
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Analyzed
+                                        and
+                                        optimized SQL Server databases, improving query performance by 25% and decrease
+                                        database load time</span>
+                                </li> 
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Deployed
+                                        server
+                                        less features on AWS Lambda and managed data pipelines using Dynamo DB and
+                                        S3</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Increased
+                                        frontend performance by 43% by optimizing asset delivery and SSR
+                                        rendering</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span
+                                        class="text-left">Development
+                                        of
+                                        dynamic and responsive user interfaces using Angular</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Enforced
+                                        CI/CD
+                                        pipelines with GitHub Actions, Docker, and ECS for zero-downtime releases</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Applied
+                                        Git
+                                        workflows and management for version control</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span
+                                        class="text-left">Established
+                                        unit and E2E testing frameworks</span>
+                                </li>
+                                <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span
+                                        class="text-left">Collaborate
+                                        with a cross functional team</span>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <div class="hidden md:block md:order-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="get new p-t-100 p-b-100 get_white-tiles get_title-left get_no-hover">
+    <div class="container">
+        <div class="text-center mb-12">
+            <h2 class="speciality-title h3 m-16">Connect With Me</h2>
+            <!-- <p class="text-lg text-muted-foreground max-w-2xl mx-auto">Find me on various platforms where I share insights
+            and connect with the community</p> -->
+        </div>
+        <div class="get-list">
+            <div class="get-item">
+                <div class="p-0 text-center space-y-4">
+                    <div
+                        class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-external-link h-6 w-6 text-blue-600" aria-hidden="true">
+                            <path d="M15 3h6v6"></path>
+                            <path d="M10 14 21 3"></path>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">LinkedIn</h3>
+                        <p class="text-sm text-muted-foreground mb-4">Professional networking and career updates</p>
+                        <a class="button" target="_blank"
+                            href="https://www.linkedin.com/in/ammar-yaqoob-full-stack-developer/">Connect</a>
+                    </div>
+                </div>
+            </div>
+            <div class="get-item">
+                <div class="p-0 text-center space-y-4">
+                    <div
+                        class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-book-open h-6 w-6 text-green-600" aria-hidden="true">
+                            <path d="M12 7v14"></path>
+                            <path
+                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                            </path>
+                        </svg>
+                    </div>
+                    <!-- <div>
+                        <h3 class="font-semibold mb-2">Medium Blog</h3>
+                        <p class="text-sm text-muted-foreground mb-4">Technical articles and tutorials</p>
+                        <button class="button" for="contact-form-popup-checkbox">Follow</button>
+                    </div> -->
+                    <div>
+                        <h3 class="font-semibold mb-2">Github</h3>
+                        <p class="text-sm text-muted-foreground mb-4">Projects</p>
+                        <a class="button" target="_blank" href="https://github.com/AmmarYaqoob">Follow</a>
+                    </div>
+                </div>
+            </div>
+            <div class="get-item">
+                <div class="p-0 text-center space-y-4">
+                    <div
+                        class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-mail h-6 w-6 text-purple-600" aria-hidden="true">
+                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Email</h3>
+                        <p class="text-sm text-muted-foreground mb-4">Direct communication for opportunities</p>
+                        <a class="button" target="_blank" href="mailto:ammarmuhammadyaqoob@gmail.com">Send Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="p-t-100 p-b-100">
+    <div class="container">
+        <h2 class="speciality-title h3 m-16">Let's Work Together</h2>
+        <p class="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">I'm always interested in new opportunities and
+            exciting projects. Whether you need a full-stack developer or data engineering expertise, let's discuss how
+            we
+            can collaborate.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a class="button" routerLink="/contact" for="contact-form-popup-checkbox">Start a Conversation</a>
+            <a class="button" routerLink="/portfolio" for="contact-form-popup-checkbox">View My Work</a>
+        </div>
+    </div>
+</section>

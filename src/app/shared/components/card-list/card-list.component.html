@@ -1,0 +1,35 @@
+<div class="get-item">
+    <!-- <h3 class="get__title h3">Programming Languages</h3>
+    <div class="progress-wrapper">
+        <span>JavaScript</span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+    </div>
+    <div class="progress-wrapper">
+        <span>Node.js</span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+    </div>
+    <div class="progress-wrapper">
+        <span>Python</span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+    </div> -->
+
+    <h3 class="get__title h3">{{ cards.title }}</h3>
+
+    <div class="progress-wrapper" *ngFor="let skill of cards.skills">
+        <span>{{ skill.name }}</span>
+
+        <div class="progress">
+            <div class="progress-bar" [style.width.%]="skill.progress">
+            </div>
+        </div>
+    </div>
+</div>

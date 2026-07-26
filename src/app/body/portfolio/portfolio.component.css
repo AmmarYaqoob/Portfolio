@@ -1,0 +1,15 @@
+.new .button:hover,
+.new button:hover {
+  background-color: #005069;
+  border: 2px solid #005069;
+  color: #fff;
+}
+
+.portfolio .header-contact .button.button_secondary {
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+.portfolio .header-item__link {
+  color: #fff !important;
+}

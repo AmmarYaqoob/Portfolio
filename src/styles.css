@@ -1,0 +1,82 @@
+.fs-14 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.p-t-100 {
+  padding-top: 100px !important;
+}
+.p-b-100 {
+  padding-bottom: 100px !important;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+.p-r-10 {
+  padding-right: 10px !important;
+}
+.border-t {
+  border-top: 1px solid #eaeaea;
+}
+
+.profile-box img {
+  width: 80%;
+  float: right;
+  border-radius: 15px !important;
+}
+
+.cases-item__caption.h4 {
+  line-height: 120% !important;
+}
+
+.cases-item .cases-item__caption.h4,
+.cases-item .cases-item__title.h2 {
+  padding: 0px;
+}
+
+.cases-item .cases-item-content {
+  padding: 0px 20px;
+}
+
+.cases-item .cases-item-content .button {
+  padding: 2px 13px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.text_black .header-contact .button.button_secondary,
+.text_black .header-item__link {
+  color: #000;
+  border-color: #000;
+}
+
+.text_black .header-item__link:after,
+.text_black .header-item__link:after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23131A58' d='M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a.999.999 0 0 0 1.42 0L17 10.59a1 1 0 0 0 0-1.42Z'/%3E%3C/svg%3E") !important;
+}
+.header .header-item__link {
+  margin-top: 9px;
+}
+
+.ml-25 {
+  margin-left: 25px;
+}
+.mr-10 {
+   margin-right: 10px;
+}
+.mb-32 {
+   margin-bottom: 32px;
+}
+
+.cases-item {
+  padding-bottom: 16px !important;
+}

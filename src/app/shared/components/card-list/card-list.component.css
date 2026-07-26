@@ -1,0 +1,26 @@
+.get-item {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  /* min-height: 460px; */
+}
+.get-item h3 {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 22px;
+}
+.get-item .progress-wrapper {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.progress {
+  width: 100px;
+  height: 10px;
+  margin-top: 6px;
+}
+
+.progress-bar {
+  background: #005069;
+}

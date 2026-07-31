@@ -38,6 +38,9 @@
               "src/styles.css",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/theme.css",
+              "src/assets/css/scroll-reveal.css",
+              "src/assets/css/web-development.css",
+              "src/assets/css/mobile.css",
               "src/assets/css/__variables.css"
             ],
             "scripts": [

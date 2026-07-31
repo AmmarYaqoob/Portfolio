@@ -63,12 +63,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     if (
       target.id === 'top-menu-checkbox' ||
-      target.closest('.header-burger, label[for="top-menu-checkbox"]')
+      target.id === 'header-checkbox-services' ||
+      target.closest(
+        '.header-burger, label[for="top-menu-checkbox"], label[for="header-checkbox-services"]'
+      )
     ) {
       return;
     }
 
-    if (target.closest('.header-item__link, .header-item-submenu-elem-link, .header-contact .button')) {
+    if (
+      target.closest(
+        '.header-item-submenu-elem-link, .header-contact .button, .header-item-dropdown, a.header-item__link'
+      )
+    ) {
       return;
     }
 

@@ -5,7 +5,7 @@
                 <div class="container">
                     <!-- <div class="home-hero-content"> -->
                     <div class="profile-container">
-                        <div class="profile-box">
+                        <div class="profile-box" appScrollReveal revealVariant="right">
                             <h1>Hi, I'm Ammar Yaqoob </h1>
                             <h3>Backend & Cloud Engineer </h3>
                             <p>Certified Cloud and Backend Engineer with 4+ years of experience in building
@@ -13,7 +13,7 @@
                             </p>
                             <app-anchor cssclass="button" routerlink="/contact" label="Get in touch"></app-anchor>
                         </div>
-                        <div class="profile-box">
+                        <div class="profile-box" appScrollReveal revealVariant="left" [revealDelay]="120">
                             <img alt="Ammar Yaqoob" class="rounded-1" src="./assets/images/Ammar-2.jpeg">
                         </div>
                     </div>
@@ -23,25 +23,25 @@
             <section class="help  new">
                 <div class="container">
                     <div class="help-wrp">
-                        <h2 class="help-title h3">How I can <br>help you</h2><input type="checkbox"
+                        <h2 class="help-title h3" appScrollReveal>How I can <br>help you</h2><input type="checkbox"
                             id="show-more-checkbox" class="show-more__checkbox"><label class="button show-more__label"
                             for="show-more-checkbox"></label>
-                        <div class="help-items-list">
-                            <a href="./webdevelopment.html" class="help-item box-hover box-hover_with-arrow"
+                        <div class="help-items-list" appScrollRevealGroup revealChildSelector=".help-item">
+                            <a routerLink="/web-development" class="help-item box-hover box-hover_with-arrow"
                                 title="Web Development">
                                 <h3 class="subtitle-extra-bold help-item__title">Web
                                     Development</h3><span class="text-main help-item__caption h3">From MVPs to
                                     world‑changing digital
                                     products</span>
                             </a>
-                            <a href="./customdevelopment.html" class="help-item box-hover box-hover_with-arrow"
+                            <a routerLink="/custom-development" class="help-item box-hover box-hover_with-arrow"
                                 title="Custom Software Development">
                                 <h3 class="subtitle-extra-bold help-item__title">Custom Software
                                     Development</h3><span class="text-main help-item__caption h3">Solutions tailored
                                     directly to your
                                     industry</span>
                             </a>
-                            <a href="./mobiledevelopment.html" class="help-item box-hover box-hover_with-arrow"
+                            <a routerLink="/mobile-application-development" class="help-item box-hover box-hover_with-arrow"
                                 title="Mobile Development">
                                 <h3 class="subtitle-extra-bold help-item__title">Mobile
                                     Development</h3><span class="text-main help-item__caption h3">Amazing mobile apps
@@ -74,7 +74,7 @@
             <section class="technologies new">
                 <div class="technologies-heading">
                     <div class="container">
-                        <h2 class="h3">Technologies I work with</h2>
+                        <h2 class="h3" appScrollReveal>Technologies I work with</h2>
                         <!-- <div class="technologies-big-row">
                             <a href="javascript:void(0)" class="box-hover">
                                 <img src="./assets/images/node-js-icon-454x512-nztofx17.png" alt="Java" width="39"
@@ -104,7 +104,7 @@
                                 <h3 class="h4">AWS</h3>
                             </a>
                         </div> -->
-                        <div class="technologies-big-row">
+                        <div class="technologies-big-row" appScrollRevealGroup revealChildSelector=".box-hover">
                             <!-- <a href="/java-development" class="box-hover">
                         <img src="data:image/png;base64,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"
                             alt="Java" width="39" height="50">
@@ -145,7 +145,7 @@
                                 <h3 class="h4">AWS</h3>
                             </a>
                         </div>
-                        <div class="technologies-small-row">
+                        <div class="technologies-small-row" appScrollRevealGroup revealChildSelector=":scope > div">
                             <div>
                                 <img src="../../../assets/images/n8n.svg" alt="N8N">
                                 <p class="h4">N8N</p>
@@ -184,10 +184,10 @@
             </section>
             <section class="hcounters dots-bg goto">
                 <div class="container hcounters-wrp">
-                    <p class="hcounters-title h3">Total in numbers</p>
-                    <p class="text-main hcounters-subtitle">Describing everything I achieved since 2020. I value your
+                    <p class="hcounters-title h3" appScrollReveal>Total in numbers</p>
+                    <p class="text-main hcounters-subtitle" appScrollReveal [revealDelay]="80">Describing everything I achieved since 2020. I value your
                         time, so let the numbers briefly summarize it</p>
-                    <div class="hcounters-item hcounters-item_big" #goto>
+                    <div class="hcounters-item hcounters-item_big" #goto appScrollReveal revealVariant="scale" [revealDelay]="120">
                         <div class="hcounters__number"><span class='count'>{{ successStory }}</span>+</div>
                         <p class="hcounters__caption-text subtitle-bold">Success stories</p>
                         <div class="hcounters-link">
@@ -195,26 +195,26 @@
                                 label="See success stories"></app-anchor>
                         </div>
                     </div>
-                    <div class="hcounters-small">
+                    <div class="hcounters-small" appScrollRevealGroup revealChildSelector=".hcounters-item">
                         <div class="hcounters-item">
-                            <div class="hcounters__number"><span class='count'>50</span>+</div>
-                            <p class="hcounters__caption text-main-bold">Skillful <br>talents</p>
+                            <div class="hcounters__number"><span class='count'>{{ yearsExperience }}</span>+</div>
+                            <p class="hcounters__caption text-main-bold">Years of <br>experience</p>
                         </div>
                         <div class="hcounters-item">
-                            <div class="hcounters__number"><span class='count'>41</span>+</div>
-                            <p class="hcounters__caption text-main-bold">Happy <br>clients</p>
+                            <div class="hcounters__number"><span class='count'>{{ technologies }}</span>+</div>
+                            <p class="hcounters__caption text-main-bold">Technologies <br>mastered</p>
                         </div>
                         <div class="hcounters-item">
-                            <div class="hcounters__number"><span class='count'>5</span>+</div>
-                            <p class="hcounters__caption text-main-bold">Years on the <br>market</p>
+                            <div class="hcounters__number"><span class='count'>{{ projects }}</span>+</div>
+                            <p class="hcounters__caption text-main-bold">Projects <br>delivered</p>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="speciality">
                 <div class="container">
-                    <h2 class="speciality-title h3">My speciality</h2>
-                    <p class="text-main speciality-subtitle">Cover every aspect of your project with services</p>
+                    <h2 class="speciality-title h3" appScrollReveal>My specialty</h2>
+                    <p class="text-main speciality-subtitle" appScrollReveal [revealDelay]="80">I cover every aspect of your project with tailored services</p>
                     <!-- <div class="speciality-wrapper"><a href="/aviation-logistics" class="box-hover"><img
                   src="/static/aviation-6761dd4bf9f2bd401247be914a8af36a.jpg" alt="Aviation" width="393" height="280"
                   loading="lazy">
@@ -231,7 +231,7 @@
                   alt="FinTech" width="393" height="280" loading="lazy">
                 <p class="subtitle-bold">FinTech</p>
               </a></div><input type="checkbox" id="show-more-checkbox2" class="show-more__checkbox"> -->
-                    <div class="speciality-grid">
+                    <div class="speciality-grid" appScrollRevealGroup revealChildSelector=".speciality-link">
                         <!-- <a class="speciality-link box-hover box-hover_with-arrow" href="/business-process-management"> -->
                         <div class="speciality-link box-hover">
                             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZmlsbD0iI0NFRTFGMiIgZD0iTTUuNjI1IDMxLjc4MTJjMC0xLjU1MzIgMS4yNTkyLTIuODEyNCAyLjgxMjUtMi44MTI0SDQuMjE4N2MtMS41NTMyIDAtMi44MTI1IDEuMjU5Mi0yLjgxMjUgMi44MTI0IDAgMS41NTMzIDEuMjU5MyAyLjgxMjYgMi44MTI1IDIuODEyNmg0LjIxODhjLTEuNTUzMyAwLTIuODEyNS0xLjI1OTMtMi44MTI1LTIuODEyNnoiLz4KICA8cGF0aCBmaWxsPSIjMTMxQTU4IiBkPSJNMzEuNzgxMiAyNS4xMDE1Yy0uNzc2NiAwLTEuNDA2Mi0uNjI5Ni0xLjQwNjItMS40MDYydi0xMC4zMzZjMC0xLjg3NDgtLjkzLTMuNjIwNC0yLjQ4NzYtNC42Njk1LS42NDQxLS40MzQtLjgxNDYtMS4zMDc4LS4zODA4LTEuOTUyLjQzMzgtLjY0NDIgMS4zMDc3LS44MTQ2IDEuOTUyLS4zODA4IDIuMzM1IDEuNTcyNiAzLjcyODkgNC4xOTAzIDMuNzI4OSA3LjAwMjN2MTAuMzM2YzAgLjc3NjYtLjYyOTYgMS40MDYyLTEuNDA2MyAxLjQwNjJ6TTUuNjI1IDIzLjY5NTN2LTEwLjMzNmMwLTEuODc0OC45My0zLjYyMDQgMi40ODc2LTQuNjY5NS42NDQxLS40MzQuODE0Ni0xLjMwNzguMzgwOC0xLjk1Mi0uNDM0LS42NDQxLTEuMzA3Ny0uODE0OC0xLjk1Mi0uMzgwOC0yLjMzNSAxLjU3MjYtMy43Mjg5IDQuMTkwMy0zLjcyODkgNy4wMDIzdjEwLjMzNmMwIC43NzY2LjYyOTYgMS40MDYyIDEuNDA2MyAxLjQwNjIuNzc2NiAwIDEuNDA2Mi0uNjI5NiAxLjQwNjItMS40MDYyek0zNiAzMS43ODEyYzAtMi4zMjYyLTEuODkyNS00LjIxODctNC4yMTg4LTQuMjE4N0g0LjIxODhDMS44OTI1IDI3LjU2MjUgMCAyOS40NTUgMCAzMS43ODEyUzEuODkyNSAzNiA0LjIxODggMzZoMjcuNTYyNEMzNC4xMDc1IDM2IDM2IDM0LjEwNzQgMzYgMzEuNzgxMnptLTQuMjE4OC0xLjQwNjJjLjc3NTUgMCAxLjQwNjMuNjMwOCAxLjQwNjMgMS40MDYyIDAgLjc3NTQtLjYzMDggMS40MDYzLTEuNDA2MyAxLjQwNjNINC4yMTg4Yy0uNzc1NSAwLTEuNDA2My0uNjMwOS0xLjQwNjMtMS40MDYzIDAtLjc3NTQuNjMwOC0xLjQwNjIgMS40MDYzLTEuNDA2MmgyNy41NjI0eiIvPgogIDxwYXRoIGZpbGw9IiMxNzgwRkYiIGQ9Ik0yNC43NzAxIDEwLjgxNzZsLS45MzY4LS41NjIxYTUuOTUzNCA1Ljk1MzQgMCAwMC4yODM2LTEuODE4YzAtLjYzMzgtLjEtMS4yNDQ0LS4yODM2LTEuODE4bC45MzY4LS41NjIyYy42NjYtLjM5OTUuODgyLTEuMjYzMy40ODIzLTEuOTI5Mi0uMzk5Ny0uNjY2LTEuMjYzNi0uODgyMS0xLjkyOTMtLjQ4MjNsLS45NTQxLjU3MjVhNS45NzQ1IDUuOTc0NSAwIDAwLTIuODIyNC0xLjU4ODdWMS40MDYzQzE5LjU0NjYuNjI5NiAxOC45MTcgMCAxOC4xNDA0IDBjLS43NzY3IDAtMS40MDYzLjYyOTYtMS40MDYzIDEuNDA2M3YxLjIyMzNjLTEuMTEwOC4yNjktMi4xMDEuODQ4OC0yLjg3MzYgMS42NDIybC0xLjA0MzUtLjYyNjFjLS42NjU5LS4zOTk3LTEuNTI5Ny0uMTgzNy0xLjkyOTMuNDgyMy0uMzk5Ni42NjYtLjE4MzcgMS41Mjk4LjQ4MjMgMS45MjkzbDEuMDU0OS42MzNhNS45NTk2IDUuOTU5NiAwIDAwLS4yNjExIDEuNzQ3MiA1Ljk1OCA1Ljk1OCAwIDAwLjI2MTEgMS43NDcxbC0xLjA1NDkuNjMzYy0uNjY2LjM5OTYtLjg4MiAxLjI2MzQtLjQ4MjQgMS45Mjk0YTEuNDA1OCAxLjQwNTggMCAwMDEuOTI5NC40ODIzbDEuMDQzNi0uNjI2MWMuNzcyNS43OTM1IDEuNzYyNyAxLjM3MzIgMi44NzM1IDEuNjQyMnYxLjIyMzRjMCAuNzc2Ni42Mjk2IDEuNDA2MiAxLjQwNjMgMS40MDYyLjc3NjYgMCAxLjQwNjItLjYyOTYgMS40MDYyLTEuNDA2MnYtMS4yMjM0YTUuOTc2NSA1Ljk3NjUgMCAwMDIuODIyNC0xLjU4ODVsLjk1NDEuNTcyNWMuMjI2NS4xMzU5LjQ3NTkuMjAwNi43MjIyLjIwMDYuNDc3NyAwIC45NDM1LS4yNDM1IDEuMjA3Mi0uNjgzLjM5OTYtLjY2Ni4xODM2LTEuNTI5OC0uNDgyNC0xLjkyOTR6bS02LjYyOTcuNzg0Yy0xLjc0NDcgMC0zLjE2NDEtMS40MTk0LTMuMTY0MS0zLjE2NDFzMS40MTk0LTMuMTY0IDMuMTY0MS0zLjE2NGMxLjc0NDYgMCAzLjE2NCAxLjQxOTMgMy4xNjQgMy4xNjQgMCAxLjc0NDctMS40MTk0IDMuMTY0MS0zLjE2NCAzLjE2NDF6Ii8+Cjwvc3ZnPgo="
@@ -255,20 +255,20 @@
                             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgZmlsbD0ibm9uZSI+CiAgPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CiAgICA8cGF0aCBmaWxsPSIjQ0VFMUYyIiBkPSJNNS43MTM3IDE0LjgyNDRjMC02LjcxODcgNC45Mzc1LTEyLjI4NCAxMS4zODE5LTEzLjI2NTZhMTMuNTE4IDEzLjUxOCAwIDAwLTIuMDM3NS0uMTUzOGMtNy40MTEzIDAtMTMuNDE5NCA2LjAwODEtMTMuNDE5NCAxMy40MTk0IDAgNy40MTE0IDYuMDA4IDEzLjQxOTUgMTMuNDE5NCAxMy40MTk1LjY5MjcgMCAxLjM3MzEtLjA1MjYgMi4wMzc1LS4xNTM4LTYuNDQ0NC0uOTgxNy0xMS4zODItNi41NDctMTEuMzgyLTEzLjI2NTd6Ii8+CiAgICA8cGF0aCBmaWxsPSIjMTMxQTU4IiBkPSJNMTQuODM4MyAyOS42NDkyYy04LjE3NDQgMC0xNC44MjQ2LTYuNjUwMy0xNC44MjQ2LTE0LjgyNDZTNi42NjM5IDAgMTQuODM4MyAwYzguMTc0MyAwIDE0LjgyNDUgNi42NTAzIDE0LjgyNDUgMTQuODI0NnMtNi42NTAyIDE0LjgyNDYtMTQuODI0NSAxNC44MjQ2em0wLTI2LjgzODlDOC4yMTM2IDIuODEwMyAyLjgyNCA4LjIgMi44MjQgMTQuODI0N2MwIDYuNjI0NyA1LjM4OTYgMTIuMDE0MiAxMi4wMTQzIDEyLjAxNDIgNi42MjQ3IDAgMTIuMDE0Mi01LjM4OTUgMTIuMDE0Mi0xMi4wMTQyIDAtNi42MjQ3LTUuMzg5NS0xMi4wMTQzLTEyLjAxNDItMTIuMDE0M3oiLz4KICAgIDxwYXRoIGZpbGw9IiMxNzgwRkYiIGQ9Ik0zNC41ODEgMzYuMDAwMWExLjQwMDggMS40MDA4IDAgMDEtLjk5MzYtLjQxMTVsLTYuMjg4Mi02LjI4ODFjLS41NDg3LS41NDg4LS41NDg3LTEuNDM4NiAwLTEuOTg3My41NDg4LS41NDg4IDEuNDM4Ni0uNTQ4OCAxLjk4NzMgMGw2LjI4ODEgNi4yODgyYy41NDg4LjU0ODguNTQ4OCAxLjQzODUgMCAxLjk4NzJhMS40MDEgMS40MDEgMCAwMS0uOTkzNi40MTE1eiIvPgogIDwvZz4KICA8ZGVmcz4KICAgIDxjbGlwUGF0aCBpZD0iY2xpcDAiPgogICAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDM2djM2SDB6Ii8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KPC9zdmc+Cg=="
                                 alt="" width="36" height="36" loading="lazy">
                             <h3 class="subtitle-bold">Bug Fixing</h3>
-                            <p class="text-main">Bug-fixing and performance enhancing</p>
+                            <p class="text-main">Bug fixing and performance enhancement</p>
                         </div>
                     </div><label class="button show-more__label" for="show-more-checkbox2"></label>
                 </div>
             </section>
             <section class="why-us dots-bg dots-bg_upper">
                 <div class="container">
-                    <div class="why-us-footer">
+                    <div class="why-us-footer" appScrollRevealGroup revealChildSelector=":scope > div">
                         <div>
                             <div class="why-us-footer-item__dot why-us-footer-item__dot_blue"></div>
                             <p class="why-us-footer-item__title subtitle-extra-bold">Always on time</p>
-                            <p class="why-us-footer-item__text text-main">As my clients confirm, deadlines are sacred to
-                                us.
-                                Because of our reliable and strong-standing project management, we always deliver on
+                            <p class="why-us-footer-item__text text-main">As my partners confirm, deadlines are sacred to
+                                me.
+                                With reliable project management, I always deliver on
                                 time.</p>
                         </div>
                         <div>
@@ -282,9 +282,7 @@
                         <div>
                             <div class="why-us-footer-item__dot why-us-footer-item__dot_light-blue"></div>
                             <p class="why-us-footer-item__title subtitle-extra-bold">Dedication</p>
-                            <p class="why-us-footer-item__text text-main">To every project, I always assign my
-                                dedication team which
-                                is fully focused on delivery and is not being distracted by other tasks.</p>
+                            <p class="why-us-footer-item__text text-main">To every project, I bring full focus on delivery without distractions from unrelated work.</p>
                         </div>
                     </div>
                 </div>

@@ -1,35 +1,20 @@
-<div class="get-item">
-    <!-- <h3 class="get__title h3">Programming Languages</h3>
-    <div class="progress-wrapper">
-        <span>JavaScript</span>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0"
-                aria-valuemax="100"></div>
-        </div>
-    </div>
-    <div class="progress-wrapper">
-        <span>Node.js</span>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0"
-                aria-valuemax="100"></div>
-        </div>
-    </div>
-    <div class="progress-wrapper">
-        <span>Python</span>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0"
-                aria-valuemax="100"></div>
-        </div>
-    </div> -->
-
+<div #skillCard class="get-item" [class.get-item--visible]="animated">
     <h3 class="get__title h3">{{ cards.title }}</h3>
 
-    <div class="progress-wrapper" *ngFor="let skill of cards.skills">
-        <span>{{ skill.name }}</span>
+    <div class="progress-wrapper" *ngFor="let skill of cards.skills; let i = index">
+        <span class="skill-label">{{ skill.name }}</span>
 
-        <div class="progress">
-            <div class="progress-bar" [style.width.%]="skill.progress">
+        <div class="progress" [attr.aria-label]="skill.name + ' proficiency'">
+            <div class="progress-bar"
+                role="progressbar"
+                [style.width.%]="barWidth(skill.progress)"
+                [style.transitionDelay.ms]="barDelay(i)"
+                [attr.aria-valuenow]="skill.progress"
+                aria-valuemin="0"
+                aria-valuemax="100">
             </div>
         </div>
+
+        <span class="skill-value">{{ skill.progress }}%</span>
     </div>
 </div>

@@ -1,7 +1,7 @@
 export const MainTechnologies = [
   {
     name: "Node.js",
-    logo: "../../../assets/images/n8n.svg"
+    logo: "../../../assets/images/node-js-icon-454x512-nztofx17.png"
   },
   {
     name: "TypeScript",

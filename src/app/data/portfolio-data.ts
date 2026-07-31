@@ -17,8 +17,8 @@ export const PORTFOLIO_DATA: any =
           country: 'United States',
           countryClass: 'usa',
           techStack: [
-            'Angular js',
-            '.Net',
+            'Angular',
+            '.NET',
             'SQL Server',
             'AWS'
           ],
@@ -28,48 +28,40 @@ export const PORTFOLIO_DATA: any =
         },
         client_and_challenge: {
           title: 'Client & Challenge',
-          image: '../../../assets/images/property-2.jpg',
+          image: '../../../assets/images/job-automation-1.png',
           description: [
-            'Maasdasdnaging rental properties often involves several disconnected processes. Landlords advertise properties on one platform, communicate through another, prepare agreements manually, and keep track of rent payments separately. Tenants face similar challenges when searching for properties, contacting landlords, and managing rental documents. Finding reliable professionals for maintenance work is another common issue. This project addresses these problems by providing a single application that supports the complete rental lifecycle.'
+            'Manual job searching is repetitive and time-consuming. Candidates spend hours browsing boards, tailoring applications, and tracking responses across spreadsheets. The challenge was to automate discovery, scoring, and reporting so users could focus on high-fit opportunities instead of admin work.'
           ]
         },
         solution: {
           title: 'Solution',
-          image: '../../../assets/images/property-1.PNG',
+          image: '../../../assets/images/job-automation-2.png',
           description: [
-            'After gathering the requirements and understanding the expected platform features and behavior, the Gecko Dynamics team provided the client with a list of recommended changes. Following a series of workshops, our team began transforming outdated solutions and building brand-new platform modules. While all the requested modules were successfully released, our team also completed a project migration to the new platform to ensure a smooth transition for customers.'
+            'I built an automation pipeline that scrapes listings, compares each role against a CV using ATS-style scoring, and exports ranked results to Excel. A web configuration panel lets users manage keywords, locations, and filters without touching code.'
           ]
         },
         feature: {
-          title: 'Feature',
+          title: 'Features',
           points: [
             {
-              title: 'Landlord Portal',
-              description: 'Landlords can create and manage property listings, rental agreements, tenant communication, and rent tracking.'
+              title: 'Job Scraping',
+              description: 'Automated collection of postings from configured sources and search criteria.'
             },
             {
-              title: 'Tenant Portal',
-              description: 'Tenants can search properties, communicate with landlords, manage agreements, and receive payment reminders.'
+              title: 'ATS Scoring',
+              description: 'CV-to-job matching with scoring to prioritize the most relevant openings.'
             },
             {
-              title: 'Admin Portal',
-              description: 'Provides complete management of users, properties, reports, and platform operations.'
+              title: 'Excel Reporting',
+              description: 'Organized export of ranked listings for review and follow-up.'
             },
             {
-              title: 'Service Provider Portal',
-              description: 'Allows maintenance providers to register, manage profiles, and respond to service requests.'
+              title: 'Web Configuration',
+              description: 'UI for managing keywords, locations, and automation settings.'
             },
             {
-              title: 'Notification System',
-              description: 'Automated notifications for rent due dates, agreements, maintenance requests, and platform activities.'
-            },
-            {
-              title: 'Payment Integration',
-              description: 'Stripe integration with automated charging, invoicing, tax support, and multiple payment methods.'
-            },
-            {
-              title: 'Property Management Workflow',
-              description: 'Complete rental lifecycle management from property listing to maintenance services.'
+              title: 'Scheduled Runs',
+              description: 'Repeatable searches so new listings are captured on a schedule.'
             }
           ]
         },
@@ -78,7 +70,7 @@ export const PORTFOLIO_DATA: any =
           description: [
             {
               icon: 'fa-diagram-project',
-              text: 'Creating UI/UX'
+              text: 'System Design'
             },
             {
               icon: 'fa-server',
@@ -89,12 +81,8 @@ export const PORTFOLIO_DATA: any =
               text: 'Back-End Development'
             },
             {
-              icon: 'fa-triangle-exclamation',
-              text: 'QA Services'
-            },
-            {
               icon: 'fa-magnifying-glass',
-              text: 'Infrastructure Setup'
+              text: 'Automation & Integration'
             }
           ]
         }
@@ -115,7 +103,7 @@ export const PORTFOLIO_DATA: any =
           country: 'United States',
           countryClass: 'usa',
           techStack: [
-            'Angular js',
+            'Angular',
             '.Net',
             'SQL Server',
             'AWS'
@@ -129,14 +117,14 @@ export const PORTFOLIO_DATA: any =
           title: 'Client & Challenge',
           image: '../../../assets/images/property-2.jpg',
           description: [
-            'Maasdasdnaging rental properties often involves several disconnected processes. Landlords advertise properties on one platform, communicate through another, prepare agreements manually, and keep track of rent payments separately. Tenants face similar challenges when searching for properties, contacting landlords, and managing rental documents. Finding reliable professionals for maintenance work is another common issue. This project addresses these problems by providing a single application that supports the complete rental lifecycle.'
+            'Managing rental properties often involves several disconnected processes. Landlords advertise properties on one platform, communicate through another, prepare agreements manually, and keep track of rent payments separately. Tenants face similar challenges when searching for properties, contacting landlords, and managing rental documents. Finding reliable professionals for maintenance work is another common issue. This project addresses these problems by providing a single application that supports the complete rental lifecycle.'
           ]
         },
         solution: {
           title: 'Solution',
           image: '../../../assets/images/property-1.PNG',
           description: [
-            'After gathering the requirements and understanding the expected platform features and behavior, the Gecko Dynamics team provided the client with a list of recommended changes. Following a series of workshops, our team began transforming outdated solutions and building brand-new platform modules. While all the requested modules were successfully released, our team also completed a project migration to the new platform to ensure a smooth transition for customers.'
+            'After gathering requirements and defining the expected platform behavior, I designed and implemented modules for listings, agreements, payments, and maintenance workflows. The solution replaced disconnected manual processes with a unified rental lifecycle platform.'
           ]
         },
         feature: {
@@ -1259,8 +1247,8 @@ export const PORTFOLIO_DATA: any =
       slug: 'rate-limiter',
       data: {
         title: 'Rate Limiter API Gateway',
-        description: '',
-        image: '../../../assets/images/white.png',
+        description: 'Serverless API gateway with token-bucket rate limiting, DynamoDB tracking, and AWS Lambda handlers.',
+        image: '../../../assets/images/tcp-ip.png',
         links:
         {
           live: '',
@@ -1268,67 +1256,54 @@ export const PORTFOLIO_DATA: any =
         },
         hero: {
           title: 'Rate Limiter API Gateway',
-          country: '',
-          countryClass: '',
+          country: 'Personal Project',
+          countryClass: 'usa',
           techStack: [
-            'Ionic',
-            'Angular',
-            'Node.js',
-            'SQL Server',
-            'REST API'
+            'AWS Lambda',
+            'API Gateway',
+            'DynamoDB',
+            'Node.js'
           ],
           description: [
-            'A serverless event-driven system built with AWS services. It accepts events via API, queues them, processes asynchronously, and stores results.'
+            'A serverless API gateway that applies token-bucket rate limiting per client, tracks usage in DynamoDB, and protects downstream services from traffic spikes.'
           ]
         },
         client_and_challenge: {
           title: 'Client & Challenge',
-          image: '../../../assets/images/rockway-2.jpg',
+          image: '../../../assets/images/tcp-ip.png',
           description: [
-            'Field engineers were manually documenting borehole findings during site investigations, making it difficult to maintain consistent records and share information between teams. Preparing reports required significant manual effort and increased the possibility of missing or inconsistent data. The challenge was to create a mobile solution capable of collecting geological observations directly in the field, even in environments with limited connectivity.'
+            'Public APIs need protection against abuse and accidental overload. Hard limits must be enforced consistently at the edge without adding latency or maintaining dedicated server infrastructure.'
           ]
         },
         solution: {
           title: 'Solution',
-          image: '../../../assets/images/rockway-1.jpg',
+          image: '../../../assets/images/white.png',
           description: [
-            'A hybrid mobile application was developed using Ionic and Angular, allowing engineers to capture drilling activities, soil layers, sampling information, and site observations directly from mobile devices. The application supports offline data collection with synchronization to the central server once an internet connection becomes available. Standardized reports can then be generated using the collected field data.'
+            'I implemented a serverless rate limiter using API Gateway and Lambda with a token-bucket algorithm. Request counts and refill windows are stored in DynamoDB, returning standard 429 responses when limits are exceeded.'
           ]
         },
         feature: {
           title: 'Features',
           points: [
             {
-              title: 'Borehole Logging',
-              description: 'Record drilling progress and geological observations for each borehole.'
+              title: 'Token-Bucket Limiting',
+              description: 'Configurable burst and sustained request rates per client or API key.'
             },
             {
-              title: 'Soil Classification',
-              description: 'Capture soil and rock layer information at different drilling depths.'
+              title: 'DynamoDB Tracking',
+              description: 'Persistent counters for limit state across concurrent requests.'
             },
             {
-              title: 'Depth-Based Recording',
-              description: 'Store observations, samples, and measurements at specific excavation depths.'
+              title: 'Lambda Handlers',
+              description: 'Lightweight edge logic with minimal cold-start impact.'
             },
             {
-              title: 'Field Report Generation',
-              description: 'Generate standardized investigation reports directly from captured site data.'
+              title: '429 Responses',
+              description: 'Clear feedback when clients exceed allowed throughput.'
             },
             {
-              title: 'Photo Documentation',
-              description: 'Attach site photographs and supporting images to investigation records.'
-            },
-            {
-              title: 'Offline Data Collection',
-              description: 'Allow engineers to continue working without an internet connection and synchronize data later.'
-            },
-            {
-              title: 'Project Management',
-              description: 'Organize multiple projects, drilling locations, and investigation records from a single application.'
-            },
-            {
-              title: 'Cloud Synchronization',
-              description: 'Synchronize completed reports and field observations with the central database.'
+              title: 'Infrastructure as Code',
+              description: 'Repeatable AWS deployment for the gateway and backing resources.'
             }
           ]
         },
@@ -1336,24 +1311,20 @@ export const PORTFOLIO_DATA: any =
           title: 'Services Provided',
           description: [
             {
-              icon: 'fa-mobile-screen',
-              text: 'Hybrid Mobile Development'
-            },
-            {
               icon: 'fa-server',
-              text: 'REST API Integration'
-            },
-            {
-              icon: 'fa-database',
-              text: 'Database Design'
+              text: 'Back-End Development'
             },
             {
               icon: 'fa-cloud',
-              text: 'Offline Data Synchronization'
+              text: 'AWS Serverless Architecture'
             },
             {
-              icon: 'fa-file-lines',
-              text: 'Report Generation'
+              icon: 'fa-database',
+              text: 'DynamoDB Design'
+            },
+            {
+              icon: 'fa-gears',
+              text: 'API Gateway Integration'
             }
           ]
         }

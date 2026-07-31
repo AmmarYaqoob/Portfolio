@@ -1,4 +1,14 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  HostListener,
+  OnDestroy,
+  QueryList,
+  ViewChild,
+  ViewChildren
+} from '@angular/core';
 import { Card, Skill } from '../../interfaces/skills-card';
 
 @Component({
@@ -6,7 +16,17 @@ import { Card, Skill } from '../../interfaces/skills-card';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent {
+export class AboutComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('timelineContainer') timelineContainer!: ElementRef<HTMLElement>;
+  @ViewChildren('timelineItem') timelineItems!: QueryList<ElementRef<HTMLElement>>;
+
+  lineProgress = 0;
+  activeDots = [false, false, false];
+
+  private itemObserver?: IntersectionObserver;
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
   data: Card[] = [
     {
       title: 'Programming Languages',
@@ -27,10 +47,8 @@ export class AboutComponent {
       title: 'Frontend Development',
       skills: [
         { name: 'Angular', progress: 85 },
-        // { name: 'RXJS', progress: 80 },
         { name: 'TypeScript', progress: 90 },
         { name: 'Tailwind CSS', progress: 85 },
-        // { name: 'Redux', progress: 80 }
       ]
     },
     {
@@ -40,25 +58,15 @@ export class AboutComponent {
         { name: 'MongoDB', progress: 85 },
         { name: 'MySQL', progress: 85 },
         { name: 'Sequelize', progress: 85 },
-        // { name: 'TypeORM', progress: 80 },
-        // { name: 'Mongoose', progress: 85 },
-        // { name: 'Prisma', progress: 75 },
-        // { name: 'DynamoDB', progress: 70 }
       ]
     },
     {
       title: 'Data Engineering',
       skills: [
-        // { name: 'Apache Spark', progress: 70 },
-        // { name: 'PySpark', progress: 70 },
-        // { name: 'Apache Kafka', progress: 75 },
         { name: 'Elasticsearch', progress: 75 },
         { name: 'ETL Pipelines', progress: 80 },
         { name: 'Data Warehousing', progress: 75 },
-        // { name: 'Pandas', progress: 80 },
         { name: 'Numpy', progress: 75 },
-        // { name: 'Matplotlib', progress: 70 },
-        // { name: 'BeautifulSoup', progress: 75 }
       ]
     },
     {
@@ -66,13 +74,9 @@ export class AboutComponent {
       skills: [
         { name: 'AWS', progress: 90 },
         { name: 'Docker', progress: 90 },
-        // { name: 'Kubernetes', progress: 75 },
         { name: 'Jenkins', progress: 70 },
-        // { name: 'Terraform', progress: 65 },
         { name: 'CI/CD Pipelines', progress: 90 },
         { name: 'GitHub Actions', progress: 90 },
-        // { name: 'Netlify', progress: 70 },
-        // { name: 'Heroku', progress: 75 }
       ]
     },
     {
@@ -80,28 +84,75 @@ export class AboutComponent {
       skills: [
         { name: 'Ionic Framework', progress: 75 },
         { name: 'Flutter', progress: 75 },
-        // { name: 'iOS', progress: 60 },
-        // { name: 'Android', progress: 65 }
       ]
     },
     {
       title: 'Version Controls & Tools',
       skills: [
-        // { name: 'GitHub', progress: 95 },
         { name: 'Git', progress: 95 },
         { name: 'BitBucket', progress: 80 },
         { name: 'Swagger', progress: 85 },
         { name: 'Postman', progress: 90 },
-        // { name: 'Redis', progress: 85 },
         { name: 'NGINX', progress: 75 },
-        // { name: 'PM2', progress: 80 },
         { name: 'Jira', progress: 90 },
         { name: 'Confluence', progress: 85 },
-        // { name: 'VS Code', progress: 95 },
-        // { name: 'Figma', progress: 70 },
-        // { name: 'Slack', progress: 90 },
-        // { name: 'Notion', progress: 85 }
       ]
     }
   ];
+
+  ngAfterViewInit(): void {
+    this.itemObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = Number((entry.target as HTMLElement).dataset['index']);
+          if (Number.isNaN(index)) {
+            return;
+          }
+          if (entry.isIntersecting) {
+            entry.target.classList.add('timeline-item--visible');
+            this.activeDots = this.activeDots.map((active, i) => i === index ? true : active);
+            this.cdr.markForCheck();
+          }
+        });
+      },
+      { threshold: 0.25, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    this.timelineItems.forEach((item, index) => {
+      item.nativeElement.dataset['index'] = String(index);
+      this.itemObserver?.observe(item.nativeElement);
+    });
+
+    this.updateLineProgress();
+  }
+
+  ngOnDestroy(): void {
+    this.itemObserver?.disconnect();
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    this.updateLineProgress();
+  }
+
+  @HostListener('window:resize')
+  onWindowResize(): void {
+    this.updateLineProgress();
+  }
+
+  private updateLineProgress(): void {
+    const container = this.timelineContainer?.nativeElement;
+    if (!container) {
+      return;
+    }
+
+    const rect = container.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    const startOffset = viewportHeight * 0.72;
+    const scrollableDistance = rect.height + startOffset - viewportHeight * 0.28;
+    const scrolled = startOffset - rect.top;
+    const progress = scrollableDistance > 0 ? (scrolled / scrollableDistance) * 100 : 0;
+
+    this.lineProgress = Math.min(100, Math.max(0, progress));
+  }
 }

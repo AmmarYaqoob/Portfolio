@@ -1,5 +1,5 @@
 <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
-  <section class="portfolio new">
+  <section class="portfolio new portfolio-page">
     <div class="container">
       <div class="breadcrumbs"><a href="/" class="breadcrumbs-link"><svg class="breadcrumbs-homeIcon"
             xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
@@ -10,19 +10,38 @@
         </a>
         <a href="/portfolio" class="breadcrumbs-link breadcrumbs-link_dark">Portfolio</a>
       </div>
-      <h1 class="h1">Learn more by checking out my portfolio</h1>
-      <div class="cases-list">
-        <div class="cases-item" *ngFor="let project of projects; let i = index">
-          <div class="cases-item-img">
-            <img [ngSrc]="project?.data?.image" width="393" height="200" alt="L’ange Hair">
+
+      <h1 class="h1" appScrollReveal>Learn more by checking out my portfolio</h1>
+
+      <div class="portfolio-filters" role="tablist" aria-label="Filter portfolio projects" appScrollReveal [revealDelay]="80">
+        <button type="button" class="portfolio-filter" *ngFor="let filter of filters"
+          [class.portfolio-filter--active]="activeFilter === filter.id" (click)="setFilter(filter.id)"
+          [attr.aria-pressed]="activeFilter === filter.id">
+          {{ filter.label }}
+        </button>
+      </div>
+
+      <p class="portfolio-results" *ngIf="filteredProjects.length === 0">
+        No projects match this filter yet.
+      </p>
+
+      <div class="cases-list" appScrollRevealGroup revealChildSelector=".cases-item" [revealKey]="activeFilter">
+        <div class="cases-item portfolio-card" *ngFor="let project of filteredProjects">
+          <div class="cases-item-img portfolio-card__media">
+            <img [ngSrc]="project.data.image" width="393" height="200" [alt]="project.data.title">
           </div>
           <div class="cases-item-content">
-            <h2 class="cases-item__title h2">{{project.data.title}}</h2>
-            <h3 class="cases-item__caption h4">{{project.data.description}}</h3>
+            <div class="portfolio-card__tags" *ngIf="project.data.categories?.length">
+              <span class="portfolio-tag" *ngFor="let category of project.data.categories">
+                {{ categoryLabel(category) }}
+              </span>
+            </div>
+            <h2 class="cases-item__title h2">{{ project.data.title }}</h2>
+            <h3 class="cases-item__caption h4">{{ project.data.description }}</h3>
             <div class="flex items-center justify-between pt-3 mt-3 border-t">
               <div class="flex space-x-2">
-                <a href="{{ project.data.links.live }}" *ngIf="project.data.links.live" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center gap-2 fs-14 p-r-10">
+                <a href="{{ project.data.links.live }}" *ngIf="project.data.links.live" target="_blank"
+                  rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 fs-14 p-r-10">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-external-link h-4 w-4 mr-1" aria-hidden="true">
@@ -32,8 +51,8 @@
                   </svg>
                   Live
                 </a>
-                <a href="{{ project.data.links.github }}" *ngIf="project.data.links.github" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center gap-2 fs-14">
+                <a href="{{ project.data.links.github }}" *ngIf="project.data.links.github" target="_blank"
+                  rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 fs-14">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-github h-4 w-4 mr-1" aria-hidden="true">
@@ -45,7 +64,7 @@
                 </a>
               </div>
               <a class="inline-flex items-center justify-center gap-2 button button_secondary" data-discover="true"
-                routerLink="/portfolio/{{i}}">
+                routerLink="/portfolio/{{ project.slug }}">
                 View Details
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -57,120 +76,6 @@
             </div>
           </div>
         </div>
-
-
-        <!-- <div class="cases-item" href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="../../../assets/images/dummy-portfolio.png" width="393" height="200" alt="L’ange Hair">
-          </div>
-          <div class="cases-item-content">
-            <h2 class="cases-item__title h2">Pillar 1</h2>
-            <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-            <div class="flex items-center justify-between pt-3 mt-3 border-t">
-              <div class="flex space-x-2">
-                <div rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 fs-14 p-r-10">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-external-link h-4 w-4 mr-1" aria-hidden="true">
-                    <path d="M15 3h6v6"></path>
-                    <path d="M10 14 21 3"></path>
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  </svg>Live
-                </div>
-              </div>
-              <a class="inline-flex items-center justify-center gap-2 button button_secondary"
-                href="/portfolio/68a64b9c27bfe1aa68d54759" data-discover="true" routerLink="/portfolio/propertease">View
-                Details
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-arrow-up-right h-3 w-3 ml-1" aria-hidden="true">
-                  <path d="M7 7h10v10"></path>
-                  <path d="M7 17 17 7"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <a class="cases-item " href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="/static/lange-hair-preview-1dc05d874af80ece8acb5b40ddfe3d8b.png" width="393" height="200"
-              alt="L’ange Hair">
-          </div>
-          <h2 class="cases-item__title h2">Pillar 2</h2>
-          <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-        </a>
-        <a class="cases-item " href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="/static/lange-hair-preview-1dc05d874af80ece8acb5b40ddfe3d8b.png" width="393" height="200"
-              alt="L’ange Hair">
-          </div>
-          <h2 class="cases-item__title h2">CMRS</h2>
-          <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-        </a>
-        <a class="cases-item " href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="/static/lange-hair-preview-1dc05d874af80ece8acb5b40ddfe3d8b.png" width="393" height="200"
-              alt="L’ange Hair">
-          </div>
-          <h2 class="cases-item__title h2">Dora</h2>
-          <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-        </a>
-        <a class="cases-item " href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="/static/lange-hair-preview-1dc05d874af80ece8acb5b40ddfe3d8b.png" width="393" height="200"
-              alt="L’ange Hair">
-          </div>
-          <h2 class="cases-item__title h2">Smooth Parcel</h2>
-          <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-        </a>
-        <a class="cases-item " href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="/static/lange-hair-preview-1dc05d874af80ece8acb5b40ddfe3d8b.png" width="393" height="200"
-              alt="L’ange Hair">
-          </div>
-          <h2 class="cases-item__title h2">Rockway</h2>
-          <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-        </a>
-        <a class="cases-item " href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="/static/lange-hair-preview-1dc05d874af80ece8acb5b40ddfe3d8b.png" width="393" height="200"
-              alt="L’ange Hair">
-          </div>
-          <h2 class="cases-item__title h2">Propertease</h2>
-          <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-        </a>
-        <a class="cases-item " href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="/static/lange-hair-preview-1dc05d874af80ece8acb5b40ddfe3d8b.png" width="393" height="200"
-              alt="L’ange Hair">
-          </div>
-          <h2 class="cases-item__title h2">Aim Solutions</h2>
-          <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-        </a>
-        <a class="cases-item " href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="/static/lange-hair-preview-1dc05d874af80ece8acb5b40ddfe3d8b.png" width="393" height="200"
-              alt="L’ange Hair">
-          </div>
-          <h2 class="cases-item__title h2">TCP/IP Finger printing</h2>
-          <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-        </a>
-        <a class="cases-item " href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="/static/lange-hair-preview-1dc05d874af80ece8acb5b40ddfe3d8b.png" width="393" height="200"
-              alt="L’ange Hair">
-          </div>
-          <h2 class="cases-item__title h2">Jhpeigo</h2>
-          <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-        </a>
-        <a class="cases-item " href="/case-study/lange-hair">
-          <div class="cases-item-img">
-            <img src="/static/lange-hair-preview-1dc05d874af80ece8acb5b40ddfe3d8b.png" width="393" height="200"
-              alt="L’ange Hair">
-          </div>
-          <h2 class="cases-item__title h2">Jhpeigo</h2>
-          <h3 class="cases-item__caption h4">Team augmentation for a US e-commerce store with 2M+ customers</h3>
-        </a> -->
       </div>
     </div>
   </section>

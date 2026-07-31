@@ -12,20 +12,26 @@ export class MainComponent implements OnInit {
   mainTechnologies: any;
   sideTechnologies: any;
   successStory = 0;
-  talents = 0;
-  clients = 0;
-  market = 0;
+  yearsExperience = 0;
+  technologies = 0;
+  projects = 0;
+
+  private animated = false;
+  private readonly targets = {
+    successStory: 10,
+    yearsExperience: 4,
+    technologies: 20,
+    projects: 10,
+  };
 
   ngOnInit(): void {
     this.mainTechnologies = MainTechnologies;
     this.sideTechnologies = SideTechnologies;
   }
 
-  private animated = false;
-  private targetNumber = 47;
   @HostListener('window:scroll')
   onScroll() {
-    if (this.animated) return;
+    if (this.animated || !this.goto) return;
     const rect = this.goto.nativeElement.getBoundingClientRect();
     if (rect.top <= window.innerHeight) {
       this.animated = true;
@@ -38,10 +44,10 @@ export class MainComponent implements OnInit {
     const start = performance.now();
     const animate = (currentTime: number) => {
       const progress = Math.min((currentTime - start) / duration, 1);
-      this.successStory = Math.ceil(progress * this.targetNumber);
-      this.talents = Math.ceil(progress * this.talents);
-      this.clients = Math.ceil(progress * this.clients);
-      this.market = Math.ceil(progress * this.market);
+      this.successStory = Math.ceil(progress * this.targets.successStory);
+      this.yearsExperience = Math.ceil(progress * this.targets.yearsExperience);
+      this.technologies = Math.ceil(progress * this.targets.technologies);
+      this.projects = Math.ceil(progress * this.targets.projects);
       if (progress < 1) {
         requestAnimationFrame(animate);
       }

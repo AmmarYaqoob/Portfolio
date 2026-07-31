@@ -1,0 +1,37 @@
+.why-us-footer-item__dot {
+  animation: why-us-dot-blink 2.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.why-us-footer-item__dot_blue {
+  animation-delay: 0s;
+}
+
+.why-us-footer-item__dot_yellow {
+  animation-delay: 0.4s;
+}
+
+.why-us-footer-item__dot_light-blue {
+  animation-delay: 0.8s;
+}
+
+@keyframes why-us-dot-blink {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  50% {
+    opacity: 0.35;
+    transform: scale(0.82);
+    box-shadow: 0 0 14px 3px rgba(23, 128, 255, 0.28);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .why-us-footer-item__dot {
+    animation: none;
+  }
+}

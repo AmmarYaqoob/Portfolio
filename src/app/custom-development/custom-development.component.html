@@ -1,6 +1,6 @@
 <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
     <section class="webdev-hero new ">
-        <div class="container">
+        <div class="container" appScrollReveal>
             <h1 class="h1">Tailored software solutions crafted to optimize your business</h1>
             <p class="webdev-hero__subtitle h2">We comprehend the distinct processes of your particular business and
                 industry, proactively addressing challenges to devise optimal solutions.</p>
@@ -8,7 +8,7 @@
                 <!-- <a class="button" routerLink="/contact" for="contact-form-popup-checkbox">Get in touch</a> -->
                 <app-anchor cssclass="button" routerlink="/contact" label="Get in touch"></app-anchor>
             </div>
-            <div class="webdev-hero-image">
+            <div class="webdev-hero-image" appScrollReveal revealVariant="scale" [revealDelay]="150">
                 <img src="./assets/images/custom-dev-hero-56fca6ec98062fe66fe28bf2fe43ecb6.png" width="816" height="562"
                     alt="project screenshot">
             </div>
@@ -16,8 +16,8 @@
     </section>
     <section class="get new get_white-tiles">
         <div class="container">
-            <h2 class="h3">What you get</h2>
-            <div class="get-list">
+            <h2 class="h3" appScrollReveal>What you get</h2>
+            <div class="get-list" appScrollRevealGroup revealChildSelector=".get-item">
                 <div class="get-item">
                     <div class="get-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -119,7 +119,7 @@
                                 </clipPath>
                             </defs>
                         </svg></div>
-                    <h3 class="get__title h3">MVP &amp; Scopping Sessions</h3><span class="get__text">Scoping sessions
+                    <h3 class="get__title h3">MVP &amp; Scoping Sessions</h3><span class="get__text">Scoping sessions
                         to
                         figure out the most efficient MVP and save you the money</span>
                 </div>
@@ -160,7 +160,7 @@
                                 </clipPath>
                             </defs>
                         </svg></div>
-                    <h3 class="get__title h3">Warranty</h3><span class="get__text">3-months of warranty for
+                    <h3 class="get__title h3">Warranty</h3><span class="get__text">3-month of warranty for
                         everyone</span>
                 </div>
                 <div class="get-item">
@@ -272,8 +272,8 @@
                     </div>
                     <div><img
                             src="data:image/png;base64,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"
-                            alt="Symphony" width="40" height="40">
-                        <p>Symphony</p>
+                            alt="Symfony" width="40" height="40">
+                        <p>Symfony</p>
                     </div>
                     <div><img
                             src="data:image/png;base64,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"
@@ -309,41 +309,41 @@
             </div>
         </div>
     </section>
-    <section class="waterfall new">
+    <section class="waterfall new custom-dev-process">
         <div class="container">
-            <h2 class="waterfall-title h3">Our Process</h2>
+            <h2 class="waterfall-title h3 custom-dev-process__title" appScrollReveal revealVariant="up">Our Process</h2>
             <ul class="waterfall-list waterfall-list_visible">
-                <li class="waterfall-item waterfall-item_yellow">
+                <li class="waterfall-item waterfall-item_yellow" appScrollReveal revealVariant="left">
                     <div class="waterfall-item-title"><span class="waterfall-item-title__inner">Analysis &amp; scoping
                             sessions</span></div><span class="waterfall-item__text waterfall-item__text_top">We start
                         with a deep
                         analysis of the problem that your solution is meant to solve</span>
                 </li>
-                <li class="waterfall-item waterfall-item_orange">
+                <li class="waterfall-item waterfall-item_orange" appScrollReveal revealVariant="right" [revealDelay]="100">
                     <div class="waterfall-item-title"><span class="waterfall-item-title__inner">Prototyping &amp;
                             specification</span></div><span class="waterfall-item__text ">We create a clickable
                         prototype of your
                         application by creating the wireframes</span>
                 </li>
-                <li class="waterfall-item waterfall-item_dark-blue">
+                <li class="waterfall-item waterfall-item_dark-blue" appScrollReveal revealVariant="left" [revealDelay]="200">
                     <div class="waterfall-item-title"><span class="waterfall-item-title__inner">Design</span></div><span
                         class="waterfall-item__text waterfall-item__text_top">We create a custom design to make your
                         product
                         look good and be easy-to-use</span>
                 </li>
-                <li class="waterfall-item waterfall-item_light-blue">
+                <li class="waterfall-item waterfall-item_light-blue" appScrollReveal revealVariant="right" [revealDelay]="300">
                     <div class="waterfall-item-title"><span class="waterfall-item-title__inner">Development</span></div>
                     <span class="waterfall-item__text ">We start developing your product following Agile to make sure we
                         deliver
                         your product in time</span>
                 </li>
-                <li class="waterfall-item waterfall-item_blue">
+                <li class="waterfall-item waterfall-item_blue" appScrollReveal revealVariant="left" [revealDelay]="400">
                     <div class="waterfall-item-title"><span class="waterfall-item-title__inner">Launch</span></div><span
                         class="waterfall-item__text waterfall-item__text_top">After your system is developed and fully
                         tested,
                         we deploy it to the production environment</span>
                 </li>
-                <li class="waterfall-item waterfall-item_green">
+                <li class="waterfall-item waterfall-item_green" appScrollReveal revealVariant="right" [revealDelay]="500">
                     <div class="waterfall-item-title"><span class="waterfall-item-title__inner">Support &amp;
                             Maintenance</span></div><span class="waterfall-item__text ">We offer DevOps services to keep
                         your

@@ -2,9 +2,9 @@
     <section class="mobile-dev-hero new">
         <div class="container">
             <div class="mobile-dev-wrp">
-                <div class="mobile-dev-main">
+                <div class="mobile-dev-main" appScrollReveal revealVariant="right">
                     <h1 class="mobile-dev__title h1">Mobile app development for startups &amp; enterprises</h1>
-                    <p class="mobile-dev__caption">We develop smart mobile apps of various kinds and size – from small
+                    <p class="mobile-dev__caption">I develop smart mobile apps of various kinds and sizes – from small
                         MVPs to
                         mobile layers working on top of complex systems</p>
                     <div class="mobile-dev-contact">
@@ -17,10 +17,10 @@
     </section>
     <section class="get-blue new">
         <div class="container">
-            <h2 class="get-blue__title h3">What you get</h2>
+            <h2 class="get-blue__title h3" appScrollReveal>What you get</h2>
             <div class="get-blue-wrp">
                 <div class="get-blue-main">
-                    <ol class="get-blue-list">
+                    <ol class="get-blue-list" appScrollRevealGroup revealChildSelector=".get-blue-item">
                         <li class="get-blue-item">
                             <h3 class="get-blue-item__title h3">Custom development</h3><span
                                 class="get-blue-item__text">We
@@ -59,8 +59,8 @@
     </section>
     <section class="process new ">
         <div class="container">
-            <h2 class="process-title h3">Our Process</h2>
-            <ol class="process-list">
+            <h2 class="process-title h3" appScrollReveal>My Process</h2>
+            <ol class="process-list" appScrollRevealGroup revealChildSelector=".process-item" [revealStagger]="100">
                 <li class="process-item"><span class="process-item__number">Step </span>
                     <h3 class="process-item__title h4">Analysis &amp; scoping sessions</h3>
                     <p class="process-item__text">We start with analysis of your project taking into account its

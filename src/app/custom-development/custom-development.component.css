@@ -1,0 +1,141 @@
+.custom-dev-process__title {
+  display: inline-block;
+}
+
+.custom-dev-process .waterfall-item.scroll-reveal {
+  transition-duration: 0.8s;
+}
+
+.custom-dev-process .waterfall-item.scroll-reveal--visible .waterfall-item-title {
+  animation: custom-dev-waterfall-title-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.custom-dev-process .waterfall-item.scroll-reveal--visible .waterfall-item__text {
+  animation: custom-dev-waterfall-text-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.12s forwards;
+  opacity: 0;
+}
+
+@keyframes custom-dev-waterfall-title-in {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes custom-dev-waterfall-text-in {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-dev-process .waterfall-item.scroll-reveal--visible .waterfall-item-title,
+  .custom-dev-process .waterfall-item.scroll-reveal--visible .waterfall-item__text {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-dev-process {
+    overflow-x: clip;
+  }
+
+  .custom-dev-process__title {
+    display: block;
+    margin-bottom: 1.75rem;
+    text-align: center;
+  }
+
+  .custom-dev-process .waterfall-list {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding-top: 0;
+    background: none;
+  }
+
+  .custom-dev-process .waterfall-item {
+    margin-bottom: 0.85rem;
+  }
+
+  .custom-dev-process .waterfall-item-title,
+  .custom-dev-process .waterfall-item .waterfall-item-title {
+    width: 100% !important;
+    margin-left: 0 !important;
+    transition: none;
+  }
+
+  .custom-dev-process .waterfall-item-title__inner {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1.15rem;
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .custom-dev-process .waterfall-item__text {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    margin-top: 0.65rem;
+    margin-bottom: 0;
+    padding: 1rem 1.15rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    text-align: left;
+    opacity: 1;
+    box-shadow: 0 8px 24px rgba(19, 26, 88, 0.06);
+  }
+
+  .custom-dev-process .waterfall-item .waterfall-item-title,
+  .custom-dev-process .waterfall-item .waterfall-item__text {
+    transition-delay: 0s !important;
+  }
+
+  .custom-dev-process .waterfall-item.scroll-reveal {
+    transition-duration: 0.55s;
+    transition-delay: 0ms !important;
+  }
+
+  .custom-dev-process .waterfall-item:nth-child(2).scroll-reveal {
+    transition-delay: 45ms !important;
+  }
+
+  .custom-dev-process .waterfall-item:nth-child(3).scroll-reveal {
+    transition-delay: 90ms !important;
+  }
+
+  .custom-dev-process .waterfall-item:nth-child(4).scroll-reveal {
+    transition-delay: 135ms !important;
+  }
+
+  .custom-dev-process .waterfall-item:nth-child(5).scroll-reveal {
+    transition-delay: 180ms !important;
+  }
+
+  .custom-dev-process .waterfall-item:nth-child(6).scroll-reveal {
+    transition-delay: 225ms !important;
+  }
+
+  .custom-dev-process .waterfall-item.scroll-reveal--visible .waterfall-item__text {
+    animation-duration: 0.55s;
+    animation-delay: 0.06s;
+  }
+}

@@ -32,7 +32,7 @@ export class ContactUsComponent {
     let control = this.contactForm.controls;
 
     this.emailService.sendEmail(control?.name?.value || '', control?.email?.value || '', control?.phone?.value || '', control?.message?.value || '');
-    this.sweetalertService.fireBasic("Message Sent", "Your message has been sent successfully. We will get back to you soon.", "success");
+    this.sweetalertService.fireBasic("Message Sent", "Your message has been sent successfully. I will get back to you soon.", "success");
     this.contactForm.reset();
     this.isLoading = false;
   }

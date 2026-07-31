@@ -1,9 +1,19 @@
-<app-header></app-header>
-<main id="___gatsby">
-  <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
-    <div class="new">
-      <router-outlet></router-outlet>
-    </div>
+<div class="splash-screen" [class.splash-hidden]="!splashVisible" aria-hidden="!splashVisible">
+  <div class="splash-content">
+    <p class="splash-logo">&lt;Ammar Yaqoob /&gt;</p>
+    <p class="splash-tagline">Backend &amp; Cloud Engineer</p>
+    <div class="splash-loader" role="status" aria-label="Loading"></div>
   </div>
-</main>
-<app-footer></app-footer>
+</div>
+
+<div class="app-shell" [class.app-visible]="!splashVisible">
+  <app-header></app-header>
+  <main id="___gatsby">
+    <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+      <div class="new">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div>

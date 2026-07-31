@@ -1,7 +1,7 @@
 <section class="home-hero">
     <div class="container">
         <div class="profile-container">
-            <div class="profile-box">
+            <div class="profile-box" appScrollReveal revealVariant="right">
                 <h1>About Me </h1>
                 <h3 class="fs-22">I'm a passionate Backend Developer and Data Engineer who loves turning complex
                     problems into
@@ -16,8 +16,8 @@
                 </p> -->
                 <p>
                     Backend Engineer with 4+ years of experience building production systems with Node.js and .NET.
-                    Also work with Angular on the frontend. I've built REST and GraphQL APIs, deployed
-                    on AWS, and worked closely with product and QA teams to push features on production servers.
+                    I also work with Angular on the frontend. I've built REST and GraphQL APIs, deployed
+                    on AWS, and worked closely with product and QA teams to deploy features to production.
                     Interested
                     in backend performance, clean API design, and scalable systems.
                 </p>
@@ -25,17 +25,17 @@
                 <a class="button" for="contact-form-popup-checkbox"
                     href="../../../assets/pdf/BackendEngineer-AmmarYaqoob.pdf" download>Download Resume</a>
             </div>
-            <div class="profile-box">
-                <img alt="Ammar Yaqoob" class="rounded-1" src="./assets/images/Ammar-2.jpeg">
+            <div class="profile-box" appScrollReveal revealVariant="left" [revealDelay]="120">
+                <img alt="Ammar Yaqoob" class="rounded-1" src="assets/images/Ammar-2.jpeg">
             </div>
         </div>
     </div>
 </section>
 
-<section class="get new p-t-100 p-b-100 get_white-tiles get_title-left get_no-hover">
+<section id="skills" class="get new p-t-100 p-b-100 get_white-tiles get_title-left get_no-hover skills-section">
     <div class="container">
-        <h2 class="speciality-title h3 m-16">What I Do</h2>
-        <p class="text-main speciality-subtitle">
+        <h2 class="speciality-title h3 m-16" appScrollReveal>What I Do</h2>
+        <p class="text-main speciality-subtitle" appScrollReveal [revealDelay]="80">
             I work across the stack from frontend interfaces to REST and GraphQL services on the backend.
             Whether it's a UI feature or an internal API, I care about clean, readable code. I like the parts
             where frontend and backend meet, and try to design APIs that make both sides simpler to build.
@@ -48,8 +48,8 @@
         </p> -->
         <div class="">
             <div class="row">
-                <div class="col-md-3" *ngFor="let d of data">
-                    <app-card-list [cards]="d"></app-card-list>
+                <div class="col-md-3" *ngFor="let d of data; let i = index">
+                    <app-card-list [cards]="d" [cardIndex]="i"></app-card-list>
                 </div>
                 <!-- <div class="col-md-3">
                     <app-card-list></app-card-list>
@@ -64,16 +64,20 @@
         </div>
     </div>
 </section>
-<section id="experience" class="p-t-100 p-b-100">
+<section id="experience" class="p-t-100 p-b-100 experience-section">
     <div class="container">
-        <div style="opacity: 1; transform: none;">
-            <h3 class="text-3xl md:text-4xl font-bold mb-12">Where I've Worked</h3>
-            <div class="relative">
-                <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2"></div>
+        <div class="experience-intro">
+            <h3 class="text-3xl md:text-4xl font-bold mb-12" appScrollReveal>Where I've Worked</h3>
+            <div class="experience-timeline relative" #timelineContainer>
+                <div class="experience-timeline__track" aria-hidden="true">
+                    <div class="experience-timeline__line-bg"></div>
+                    <div class="experience-timeline__line-fill" [style.height.%]="lineProgress"></div>
+                </div>
                 <div class="space-y-12">
-                    <div class="relative grid md:grid-cols-2 gap-8" style="opacity: 1; transform: none;">
-                        <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 timeline-dot"></div>
-                        <div class="pl-8 md:pl-0 md:pr-12">
+                    <div #timelineItem class="timeline-item relative grid md:grid-cols-2 gap-8">
+                        <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 timeline-dot"
+                            [class.timeline-dot--active]="activeDots[0]"></div>
+                        <div class="timeline-content pl-8 md:pl-0 md:pr-12">
                             <span class="font-mono text-sm text-primary">01/2022 – 10/2024</span>
                             <h4 class="text-xl font-semibold mt-1">Backend &amp; Cloud Engineer</h4>
                             <p class="text-muted-foreground mb-4">Regtify</p>
@@ -93,12 +97,12 @@
                                     <span class="text-primary mt-1.5 shrink-0">▸</span>
                                     <span class="text-left">Designed
                                         and optimized SQL Server databases, improving query performance by 25% and
-                                        decrease database load time.</span>
+                                        decreased database load time.</span>
                                 </li>
                                 <li class="text-sm text-muted-foreground flex items-start gap-2">
                                     <span class="text-primary mt-1.5 shrink-0">▸</span>
-                                    <span class="text-left">Deployed server less features on AWS Lambda and managed data
-                                        pipelines using Dynamo DB and S3.</span>
+                                    <span class="text-left">Deployed serverless features on AWS Lambda and managed data
+                                        pipelines using DynamoDB and S3.</span>
                                 </li>
                                 <!-- <li class="text-sm text-muted-foreground flex items-start gap-2">
                                     <span class="text-primary mt-1.5 shrink-0">▸</span>
@@ -131,16 +135,17 @@
                                 </li>
                                 <li class="text-sm text-muted-foreground flex items-start gap-2">
                                     <span class="text-primary mt-1.5 shrink-0">▸</span><span
-                                        class="text-left">Collaborate
-                                        with a cross functional team.</span>
+                                        class="text-left">Collaborated
+                                        with a cross-functional team.</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="hidden md:block md:order-2"></div>
                     </div>
-                    <div class="relative grid md:grid-cols-2 gap-8" style="opacity: 1; transform: none;">
-                        <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 timeline-dot"></div>
-                        <div class="pl-8 md:pl-0 md:order-2 md:pl-12">
+                    <div #timelineItem class="timeline-item timeline-item--right relative grid md:grid-cols-2 gap-8">
+                        <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 timeline-dot"
+                            [class.timeline-dot--active]="activeDots[1]"></div>
+                        <div class="timeline-content pl-8 md:pl-0 md:order-2 md:pl-12">
                             <span class="font-mono text-sm text-primary">09/2020 – 12/2021</span>
                             <h4 class="text-xl font-semibold mt-1">Backend Engineer</h4>
                             <p class="text-muted-foreground mb-4">Aimviz</p>
@@ -153,19 +158,12 @@
                                 </li>
                                 <li class="text-sm text-muted-foreground flex items-start gap-2">
                                     <span class="text-primary mt-1.5 shrink-0">▸</span>
-                                    <span class="text-left">Integrated RESTful api services.</span>
-                                    <!-- </li>
-                                <li class="text-sm text-muted-foreground flex items-start gap-2">
-                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
-                                    <span class="text-left">Redesigned
-                                        legacy web apps using Angular, enhancing performance and UX for 80k monthly
-                                        users.</span>
-                                </li> -->
+                                    <span class="text-left">Integrated RESTful API services.</span>
+                                </li>
                                 <li class="text-sm text-muted-foreground flex items-start gap-2">
                                     <span class="text-primary mt-1.5 shrink-0">▸</span>
                                     <span class="text-left">Used Jira and Git-based workflows for task management,
-                                        version control, and agile development pro-
-                                        cesses.</span>
+                                        version control, and agile development processes.</span>
                                 </li>
                                 <li class="text-sm text-muted-foreground flex items-start gap-2">
                                     <span class="text-primary mt-1.5 shrink-0">▸</span>
@@ -177,64 +175,22 @@
                         </div>
                         <div class="hidden md:block"></div>
                     </div>
-                    <div class="relative grid md:grid-cols-2 gap-8" style="opacity: 1; transform: none;">
-                        <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 timeline-dot"></div>
-                        <div class="pl-8 md:pl-0 md:pr-12">
+                    <div #timelineItem class="timeline-item relative grid md:grid-cols-2 gap-8">
+                        <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 timeline-dot"
+                            [class.timeline-dot--active]="activeDots[2]"></div>
+                        <div class="timeline-content pl-8 md:pl-0 md:pr-12">
                             <span class="font-mono text-sm text-primary">03/2020 – 08/2020</span>
                             <h4 class="text-xl font-semibold mt-1">Internship</h4>
                             <p class="text-muted-foreground mb-4">Blueex</p>
                             <ul class="space-y-2 ">
-                                <!-- <li class="text-sm text-muted-foreground flex items-start gap-2">
-                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Built
-                                        backend
-                                        solution using Node.js with SQL database integration, handling over 100k API
-                                        calls
-                                        per day</span>
-                                </li> 
                                 <li class="text-sm text-muted-foreground flex items-start gap-2">
                                     <span class="text-primary mt-1.5 shrink-0">▸</span>
-                                    <span class="text-left">Analyzed
-                                        and
-                                        optimized SQL Server databases, improving query performance by 25% and decrease
-                                        database load time</span>
-                                </li> 
-                                <li class="text-sm text-muted-foreground flex items-start gap-2">
-                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Deployed
-                                        server
-                                        less features on AWS Lambda and managed data pipelines using Dynamo DB and
-                                        S3</span>
+                                    <span class="text-left">Built backend services with Node.js and SQL database integration.</span>
                                 </li>
                                 <li class="text-sm text-muted-foreground flex items-start gap-2">
-                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Increased
-                                        frontend performance by 43% by optimizing asset delivery and SSR
-                                        rendering</span>
+                                    <span class="text-primary mt-1.5 shrink-0">▸</span>
+                                    <span class="text-left">Supported internal tools and API integrations during the internship period.</span>
                                 </li>
-                                <li class="text-sm text-muted-foreground flex items-start gap-2">
-                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span
-                                        class="text-left">Development
-                                        of
-                                        dynamic and responsive user interfaces using Angular</span>
-                                </li>
-                                <li class="text-sm text-muted-foreground flex items-start gap-2">
-                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Enforced
-                                        CI/CD
-                                        pipelines with GitHub Actions, Docker, and ECS for zero-downtime releases</span>
-                                </li>
-                                <li class="text-sm text-muted-foreground flex items-start gap-2">
-                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span class="text-left">Applied
-                                        Git
-                                        workflows and management for version control</span>
-                                </li>
-                                <li class="text-sm text-muted-foreground flex items-start gap-2">
-                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span
-                                        class="text-left">Established
-                                        unit and E2E testing frameworks</span>
-                                </li>
-                                <li class="text-sm text-muted-foreground flex items-start gap-2">
-                                    <span class="text-primary mt-1.5 shrink-0">▸</span><span
-                                        class="text-left">Collaborate
-                                        with a cross functional team</span>
-                                </li> -->
                             </ul>
                         </div>
                         <div class="hidden md:block md:order-2"></div>
@@ -248,11 +204,11 @@
 <section class="get new p-t-100 p-b-100 get_white-tiles get_title-left get_no-hover">
     <div class="container">
         <div class="text-center mb-12">
-            <h2 class="speciality-title h3 m-16">Connect With Me</h2>
+            <h2 class="speciality-title h3 m-16" appScrollReveal>Connect With Me</h2>
             <!-- <p class="text-lg text-muted-foreground max-w-2xl mx-auto">Find me on various platforms where I share insights
             and connect with the community</p> -->
         </div>
-        <div class="get-list">
+        <div class="get-list" appScrollRevealGroup revealChildSelector=".get-item">
             <div class="get-item">
                 <div class="p-0 text-center space-y-4">
                     <div
@@ -292,7 +248,7 @@
                         <button class="button" for="contact-form-popup-checkbox">Follow</button>
                     </div> -->
                     <div>
-                        <h3 class="font-semibold mb-2">Github</h3>
+                        <h3 class="font-semibold mb-2">GitHub</h3>
                         <p class="text-sm text-muted-foreground mb-4">Projects</p>
                         <a class="button" target="_blank" href="https://github.com/AmmarYaqoob">Follow</a>
                     </div>
@@ -324,7 +280,7 @@
     <div class="container">
         <h2 class="speciality-title h3 m-16">Let's Work Together</h2>
         <p class="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">I'm always interested in new opportunities and
-            exciting projects. Whether you need a full-stack developer or data engineering expertise, let's discuss how
+            exciting projects. Whether you need a backend engineer or data engineering expertise, let's discuss how
             we
             can collaborate.
         </p>

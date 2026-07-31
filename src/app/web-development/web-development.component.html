@@ -1,6 +1,6 @@
 <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
     <section class="webdev-hero new custom-dev-hero">
-        <div class="container">
+        <div class="container" appScrollReveal>
             <h1 class="h1">Create intelligent web applications.</h1>
             <p class="webdev-hero__subtitle h2">Personalized approach and solutions designed specifically for the unique
                 nature of your project.</p>
@@ -8,7 +8,7 @@
                 <!-- <label class="button" for="contact-form-popup-checkbox">Get in touch</label> -->
                 <app-anchor cssclass="button mr-10" routerlink="/contact" label="Get in touch"></app-anchor>
             </div>
-            <div class="webdev-hero-image">
+            <div class="webdev-hero-image" appScrollReveal revealVariant="scale" [revealDelay]="150">
                 <img src="./assets/images/web-dev-hero-0fc480708aca554e212891dec972131e.png" width="1116" height="810"
                     alt="project screenshot">
             </div>
@@ -17,15 +17,15 @@
     <section class="business-why-us business-why-us_web-dev new">
         <div class="container">
             <div class="business-why-us-wrp">
-                <div class="business-why-us-main">
+                <div class="business-why-us-main" appScrollReveal revealVariant="left">
                     <h2 class="business-why-us__title h2">Let’s grow your business together</h2>
                     <p class="business-why-us__text h3">Web development services involve crafting, designing, and
                         maintaining websites. This includes tasks such as web design, web development, and managing
                         databases.<br><br>Selecting the correct web development partner is paramount for your project's
-                        success, particularly when aiming to build a thriving product. With years of experience, we
-                        boast a proven track record in delivering sophisticated web app solutions.</p>
+                        success, particularly when aiming to build a thriving product. With years of experience, I
+                        have a proven track record in delivering sophisticated web app solutions.</p>
                 </div>
-                <div class="business-why-us-images"><img
+                <div class="business-why-us-images" appScrollReveal revealVariant="right" [revealDelay]="120"><img
                         src="./assets/images/web-dev-grow-img-1-04ebf9ce69de88ba585cee2ac9d3f4c0.png" width="292"
                         height="470" alt=""><img
                         src="./assets/images/web-dev-grow-img-2-0035a0707e0ea0c759c054103572643f.png" width="292"
@@ -33,10 +33,11 @@
             </div>
         </div>
     </section>
-    <section class="get new get_white-tiles">
+    <section class="get new get_white-tiles web-dev-get">
         <div class="container">
-            <h2 class="h3">What you get</h2>
-            <div class="get-list">
+            <h2 class="h3 web-dev-get__title" appScrollReveal revealVariant="up">What you get</h2>
+            <div class="get-list" appScrollRevealGroup revealChildSelector=".get-item" revealVariant="scale"
+                [revealStagger]="90">
                 <!-- <app-what-you-get-card title="dafdf", info="asldfjsdlkfj"></app-what-you-get-card> -->
                 <div class="get-item">
                     <div class="get-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -120,7 +121,7 @@
                                 d="M16.7498 16.5C16.5887 16.5 16.4263 16.4689 16.2716 16.4048C15.8045 16.2113 15.5 15.7555 15.5 15.2499L15.5003 8.32444C15.4808 6.1145 16.3308 4.02831 17.894 2.45C19.4588 0.870125 21.5386 0 23.75 0C25.9766 0 28.0593 0.864625 29.6143 2.43469C31.1739 4.00931 32.021 6.10325 31.9996 8.33075C31.9786 10.5254 31.1058 12.5818 29.5421 14.1208C27.9832 15.6551 25.9165 16.5 23.7222 16.5C23.7196 16.5 23.7168 16.5 23.7142 16.5C22.4239 16.5 21.1901 16.2118 20.048 15.6431C19.28 15.2607 18.3553 15.4126 17.7469 16.0209L17.6339 16.1339C17.3948 16.373 17.075 16.5 16.7498 16.5ZM19.1605 12.9336C19.84 12.9336 20.5249 13.0879 21.1622 13.4052C21.9551 13.7999 22.8141 14.0001 23.7154 14.0001H23.7209C26.8782 14.0003 29.4696 11.4467 29.4997 8.30681C29.5146 6.75156 28.9245 5.291 27.8381 4.194C26.7562 3.10156 25.3043 2.5 23.75 2.5C22.2109 2.5 20.762 3.107 19.6703 4.20931C18.5786 5.3115 17.9855 6.76669 18.0003 8.30681C18.0003 8.31081 18.0004 8.31481 18.0004 8.31888L18.0001 13.086C18.3783 12.9849 18.7685 12.9336 19.1605 12.9336Z"
                                 fill="#1780FF"></path>
                         </svg></div>
-                    <h3 class="get__title h3">MVP &amp; Scopping Sessions</h3><span class="get__text">Scoping sessions
+                    <h3 class="get__title h3">MVP &amp; Scoping Sessions</h3><span class="get__text">Scoping sessions
                         to
                         figure out the most efficient MVP</span>
                 </div>
@@ -154,7 +155,7 @@
                                 d="M17.9989 17.4109C17.9989 15.4595 16.2635 13.872 14.1305 13.872C13.2238 13.872 12.5657 13.4343 12.5657 12.8312C12.5657 12.2572 13.028 11.7903 13.5961 11.7903C14.1689 11.7903 14.9151 11.8527 16.1064 12.316C16.7492 12.5661 17.4732 12.2475 17.7232 11.6046C17.9732 10.9617 17.6546 10.2378 17.0118 9.98783C16.3917 9.7467 15.851 9.58851 15.376 9.48441V8.52197C15.376 7.83214 14.8168 7.27295 14.127 7.27295C13.4371 7.27295 12.8779 7.83214 12.8779 8.52197V9.36606C11.2756 9.69968 10.0676 11.1265 10.0676 12.8311C10.0676 14.8486 11.8143 16.37 14.1305 16.37C14.8733 16.37 15.5009 16.8466 15.5009 17.4108C15.5009 17.9653 14.9854 18.4517 14.3976 18.4517C13.939 18.4517 12.7884 18.2836 11.6531 17.8323C11.012 17.5776 10.2858 17.8906 10.031 18.5316C9.77624 19.1726 10.0894 19.8989 10.7304 20.1537C11.4537 20.4412 12.2083 20.6463 12.8779 20.7763V21.5118C12.8779 22.2016 13.4371 22.7608 14.1269 22.7608C14.8167 22.7608 15.3759 22.2016 15.3759 21.5118V20.8143C15.947 20.6537 16.4748 20.3533 16.9147 19.9294C17.6139 19.2557 17.9989 18.3613 17.9989 17.4109Z"
                                 fill="#1780FF"></path>
                         </svg></div>
-                    <h3 class="get__title h3">Warranty</h3><span class="get__text">3-months of warranty for
+                    <h3 class="get__title h3">Warranty</h3><span class="get__text">3-month of warranty for
                         everyone</span>
                 </div>
                 <div class="get-item">
@@ -190,16 +191,16 @@
                                 fill="#131A58"></path>
                         </svg></div>
                     <h3 class="get__title h3">Project Management</h3>
-                    <span class="get__text">Rest assured and save time - will take care of delivering your project</span>
+                    <span class="get__text">I will take care of delivering your project</span>
                 </div>
             </div>
         </div>
     </section>
-    <section class="process new process_light">
+    <section class="process new process_light web-dev-process">
         <div class="container">
-            <h2 class="process-title h3">Our Process</h2>
+            <h2 class="process-title h3 web-dev-process__title" appScrollReveal revealVariant="up">My Process</h2>
             <ol class="process-list">
-                <li class="process-item"><span class="process-item__number">Step </span>
+                <li class="process-item" appScrollReveal revealVariant="left"><span class="process-item__number">Step </span>
                     <h3 class="process-item__title h4">Analysis &amp; scoping sessions</h3>
                     <p class="process-item__text">We start with analysis of your project taking into account its
                         particular
@@ -207,7 +208,7 @@
                     <div class="process-item-img"><img src="./assets/images/theme/analyse-icon.png" width="395"
                             height="200" alt="Analysis &amp; scoping sessions"></div>
                 </li>
-                <li class="process-item"><span class="process-item__number">Step </span>
+                <li class="process-item" appScrollReveal revealVariant="right" [revealDelay]="100"><span class="process-item__number">Step </span>
                     <h3 class="process-item__title h4">Prototyping &amp; specification</h3>
                     <p class="process-item__text">Our UX designer builds a clickable prototype of your app, illustrating
                         its
@@ -215,7 +216,7 @@
                     <div class="process-item-img"><img src="./assets/images/theme/prototype-icon.png" width="395"
                             height="200" alt="Prototyping &amp; specification"></div>
                 </li>
-                <li class="process-item"><span class="process-item__number">Step </span>
+                <li class="process-item" appScrollReveal revealVariant="left" [revealDelay]="200"><span class="process-item__number">Step </span>
                     <h3 class="process-item__title h4">Design</h3>
                     <p class="process-item__text">We put a soul &amp; life into your project by creating its visual
                         identity
@@ -223,7 +224,7 @@
                     <div class="process-item-img"><img src="./assets/images/theme/design-icon.png" width="395"
                             height="200" alt="Design"></div>
                 </li>
-                <li class="process-item"><span class="process-item__number">Step </span>
+                <li class="process-item" appScrollReveal revealVariant="right" [revealDelay]="300"><span class="process-item__number">Step </span>
                     <h3 class="process-item__title h4">Development</h3>
                     <p class="process-item__text">We start developing your product following Agile to make sure we
                         deliver
@@ -231,7 +232,7 @@
                     <div class="process-item-img"><img src="./assets/images/theme/development-icon.png" width="395"
                             height="200" alt="Development"></div>
                 </li>
-                <li class="process-item"><span class="process-item__number">Step </span>
+                <li class="process-item" appScrollReveal revealVariant="left" [revealDelay]="400"><span class="process-item__number">Step </span>
                     <h3 class="process-item__title h4">Launch</h3>
                     <p class="process-item__text">Having your product developed, tested and double-checked, we deploy
                         it,
@@ -239,7 +240,7 @@
                     <div class="process-item-img"><img src="./assets/images/theme/launch-icon.png" width="395"
                             height="200" alt="Launch"></div>
                 </li>
-                <li class="process-item"><span class="process-item__number">Step </span>
+                <li class="process-item" appScrollReveal revealVariant="right" [revealDelay]="500"><span class="process-item__number">Step </span>
                     <h3 class="process-item__title h4">Support &amp; Maintenance</h3>
                     <p class="process-item__text">We assign a dedicated team to keep an eye on your product, rapidly
                         react and
@@ -250,49 +251,26 @@
             </ol>
         </div>
     </section>
-    <section class="iot-tech new">
+    <section class="web-dev-tech new">
         <div class="container">
-            <h2 class="iot-tech__title h2">Languages, Frameworks &amp; Tools</h2>
-            <div class="iot-tech-list">
-                <div class="iot-tech-item">
-                    <p class="iot-tech-item__title">Back-end &amp; Data</p>
-                    <div class="iot-tech-sublist">
-                        <p class="iot-tech-subitem">Golang</p>
-                        <p class="iot-tech-subitem">Node.js</p>
-                        <p class="iot-tech-subitem">.NET</p>
+            <div class="web-dev-tech__intro" appScrollReveal>
+                <h2 class="web-dev-tech__title h2">Languages, Frameworks &amp; Tools</h2>
+                <p class="web-dev-tech__subtitle text-main">
+                    The stack I use depends on your product, but these are the technologies I reach for most often
+                    when building scalable web applications.
+                </p>
+            </div>
+            <div class="web-dev-tech-grid" appScrollRevealGroup revealChildSelector=".web-dev-tech-card" [revealStagger]="90">
+                <article class="web-dev-tech-card" *ngFor="let group of techStack"
+                    [ngClass]="'web-dev-tech-card--' + group.accent">
+                    <div class="web-dev-tech-card__header">
+                        <span class="web-dev-tech-card__badge" aria-hidden="true"></span>
+                        <h3 class="web-dev-tech-card__title">{{ group.title }}</h3>
                     </div>
-                </div>
-                <div class="iot-tech-item">
-                    <p class="iot-tech-item__title">Front-End</p>
-                    <div class="iot-tech-sublist">
-                        <p class="iot-tech-subitem">Angular</p>
-                        <p class="iot-tech-subitem">React</p>
-                        <p class="iot-tech-subitem">Vue.js</p>
-                        <p class="iot-tech-subitem">HTML, CSS</p>
-                    </div>
-                </div>
-                <div class="iot-tech-item">
-                    <p class="iot-tech-item__title">Mobile</p>
-                    <div class="iot-tech-sublist">
-                        <p class="iot-tech-subitem">Flutter</p>
-                        <p class="iot-tech-subitem">Ionic</p>
-                    </div>
-                </div>
-                <div class="iot-tech-item">
-                    <p class="iot-tech-item__title">Devops &amp; Cloud</p>
-                    <div class="iot-tech-sublist">
-                        <p class="iot-tech-subitem">AWS</p>
-                        <p class="iot-tech-subitem">Jenkins</p>
-                        <p class="iot-tech-subitem">Heroku</p>
-                    </div>
-                </div>
-                <div class="iot-tech-item">
-                    <p class="iot-tech-item__title">Design</p>
-                    <div class="iot-tech-sublist">
-                        <p class="iot-tech-subitem">Figma</p>
-                        <p class="iot-tech-subitem">Illustrator</p>
-                    </div>
-                </div>
+                    <ul class="web-dev-tech-card__list">
+                        <li class="web-dev-tech-card__tag" *ngFor="let tool of group.tools">{{ tool }}</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>

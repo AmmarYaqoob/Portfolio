@@ -3,11 +3,38 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-web-development',
-  templateUrl: './web-development.component.html',
-  styleUrl: './web-development.component.css'
+  templateUrl: './web-development.component.html'
 })
 
 export class WebDevelopmentComponent {
+
+  techStack = [
+    {
+      title: 'Back-end & Data',
+      accent: 'backend',
+      tools: ['Golang', 'Node.js', '.NET'],
+    },
+    {
+      title: 'Front-End',
+      accent: 'frontend',
+      tools: ['Angular', 'React', 'Vue.js', 'HTML & CSS'],
+    },
+    {
+      title: 'Mobile',
+      accent: 'mobile',
+      tools: ['Flutter', 'Ionic'],
+    },
+    {
+      title: 'DevOps & Cloud',
+      accent: 'devops',
+      tools: ['AWS', 'Jenkins', 'Heroku'],
+    },
+    {
+      title: 'Design',
+      accent: 'design',
+      tools: ['Figma', 'Illustrator'],
+    },
+  ];
 
   teamComposition: any =
     [

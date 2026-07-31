@@ -24,6 +24,8 @@ import { SeoDevelopmentComponent } from './seo-development/seo-development.compo
 import { ButtonComponent } from './shared/components/button/button.component';
 import { AnchorComponent } from './shared/components/anchor/anchor.component';
 import { WhatYouGetCardComponent } from './shared/components/what-you-get-card/what-you-get-card.component';
+import { ScrollRevealDirective } from './shared/directives/scroll-reveal.directive';
+import { ScrollRevealGroupDirective } from './shared/directives/scroll-reveal-group.directive';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,6 @@ import { WhatYouGetCardComponent } from './shared/components/what-you-get-card/w
     ServicesComponent,
     EducationComponent,
     ConnectComponent,
-    FooterComponent,
     CardListComponent,
     ContactUsComponent,
     CaseStudyComponent,
@@ -48,7 +49,9 @@ import { WhatYouGetCardComponent } from './shared/components/what-you-get-card/w
     SeoDevelopmentComponent,
     ButtonComponent,
     AnchorComponent,
-    WhatYouGetCardComponent
+    WhatYouGetCardComponent,
+    ScrollRevealDirective,
+    ScrollRevealGroupDirective
   ],
   imports: [
     BrowserModule,

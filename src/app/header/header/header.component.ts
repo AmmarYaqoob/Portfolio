@@ -9,6 +9,7 @@ import { filter, Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   text_black = false;
+  headerLight = false;
   blackRoutes = ['portfolio', 'contact'];
   private routerSub?: Subscription;
 
@@ -16,18 +17,25 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.updateHeaderTheme(this.router.url);
+    this.updateHeaderOnScroll();
 
     this.routerSub = this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event) => {
         const url = (event as NavigationEnd).urlAfterRedirects;
         this.updateHeaderTheme(url);
+        this.updateHeaderOnScroll();
         this.closeMenu();
       });
   }
 
   ngOnDestroy(): void {
     this.routerSub?.unsubscribe();
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    this.updateHeaderOnScroll();
   }
 
   closeMenu(): void {
@@ -69,5 +77,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   private updateHeaderTheme(url: string): void {
     this.text_black = this.blackRoutes.some(route => url.startsWith(`/${route}`));
+    this.updateHeaderOnScroll();
+  }
+
+  private updateHeaderOnScroll(): void {
+    if (this.text_black) {
+      this.headerLight = true;
+      return;
+    }
+
+    this.headerLight = window.scrollY >= 50;
   }
 }

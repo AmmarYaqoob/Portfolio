@@ -50,14 +50,5 @@
 <body class="loaded">
   <app-root></app-root>
 </body>
-<script>
-  var addHeaderStylesOnScroll = function () {
-    var a = document.querySelector(".header");
-    a && (50 <= window.scrollY ? a.classList.add("header_light") : a.classList.remove("header_light"));
-  };
-  (function (a) {
-    addHeaderStylesOnScroll(), a.addEventListener("scroll", addHeaderStylesOnScroll);
-  })(window);
-</script>
 
 </html>

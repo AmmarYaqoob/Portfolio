@@ -1,31 +1,27 @@
 <section class="home-hero">
     <div class="container">
         <div class="profile-container">
-            <div class="profile-box" appScrollReveal revealVariant="right">
-                <h1>About Me </h1>
-                <h3 class="fs-22">I'm a passionate Backend Developer and Data Engineer who loves turning complex
-                    problems into
-                    scalable solutions.</h3>
-                <!-- <p>Backend Engineer with 5+ years of experience delivering scalable, data-driven web platforms using
-                    Node.js and .Net technologies. Specialized in Node.js, JavaScript, Typescript, Redis, and Angular, with
-                    experience
-                    deploying complex systems into production environments. Skilled in REST and GraphQL API
-                    interface, and building user-centric web apps with Angular. Proven track record in working with
-                    crossfunctional
-                    teams, optimizing backend performance, and delivering business-focused features.
-                </p> -->
-                <p>
-                    Backend Engineer with 4+ years of experience building production systems with Node.js and .NET.
-                    I also work with Angular on the frontend. I've built REST and GraphQL APIs, deployed
-                    on AWS, and worked closely with product and QA teams to deploy features to production.
-                    Interested
-                    in backend performance, clean API design, and scalable systems.
-                </p>
-                <app-anchor cssclass="button mr-10" routerlink="/contact" label="Get in touch"></app-anchor>
-                <a class="button" for="contact-form-popup-checkbox"
-                    href="../../../assets/pdf/BackendEngineer-AmmarYaqoob.pdf" download>Download Resume</a>
+            <div class="profile-box profile-box-content" appScrollReveal revealVariant="right">
+                <div class="profile-box-text">
+                    <h1>About Me </h1>
+                    <h3 class="fs-22">I'm a passionate Backend Developer and Data Engineer who loves turning complex
+                        problems into
+                        scalable solutions.</h3>
+                    <p>
+                        Backend Engineer with 4+ years of experience building production systems with Node.js and .NET.
+                        I also work with Angular on the frontend. I've built REST and GraphQL APIs, deployed
+                        on AWS, and worked closely with product and QA teams to deploy features to production.
+                        Interested
+                        in backend performance, clean API design, and scalable systems.
+                    </p>
+                </div>
+                <div class="profile-box-actions">
+                    <app-anchor cssclass="button mr-10" routerlink="/contact" label="Get in touch"></app-anchor>
+                    <a class="button" for="contact-form-popup-checkbox"
+                        href="../../../assets/pdf/BackendEngineer-AmmarYaqoob.pdf" download>Download Resume</a>
+                </div>
             </div>
-            <div class="profile-box" appScrollReveal revealVariant="left" [revealDelay]="120">
+            <div class="profile-box profile-box-media" appScrollReveal revealVariant="left" [revealDelay]="120">
                 <img alt="Ammar Yaqoob" class="rounded-1" src="assets/images/Ammar-2.jpeg">
             </div>
         </div>

@@ -10,10 +10,6 @@
   color: #000000 !important;
 }
 
-.portfolio .header-item__link {
-  color: #fff !important;
-}
-
 .portfolio-filters {
   display: flex;
   flex-wrap: wrap;
@@ -78,6 +74,45 @@
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-bottom: 0.75rem;
+}
+
+.portfolio-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+  border-top: 1px solid #eaeaea;
+}
+
+.portfolio-card__links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.portfolio-card__links a {
+  white-space: nowrap;
+}
+
+.portfolio-card__actions .button {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+@media (max-width: 767px) {
+  .portfolio-card__actions {
+    flex-wrap: nowrap;
+  }
+
+  .portfolio-card__actions .button {
+    width: auto;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8125rem;
+  }
 }
 
 .portfolio-tag {

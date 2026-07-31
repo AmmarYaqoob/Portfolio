@@ -38,8 +38,8 @@
             </div>
             <h2 class="cases-item__title h2">{{ project.data.title }}</h2>
             <h3 class="cases-item__caption h4">{{ project.data.description }}</h3>
-            <div class="flex items-center justify-between pt-3 mt-3 border-t">
-              <div class="flex space-x-2">
+            <div class="portfolio-card__actions">
+              <div class="portfolio-card__links">
                 <a href="{{ project.data.links.live }}" *ngIf="project.data.links.live" target="_blank"
                   rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 fs-14 p-r-10">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24" fill="none"

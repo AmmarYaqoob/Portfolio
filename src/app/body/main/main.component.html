@@ -5,15 +5,19 @@
                 <div class="container">
                     <!-- <div class="home-hero-content"> -->
                     <div class="profile-container">
-                        <div class="profile-box" appScrollReveal revealVariant="right">
-                            <h1>Hi, I'm Ammar Yaqoob </h1>
-                            <h3>Backend & Cloud Engineer </h3>
-                            <p>Certified Cloud and Backend Engineer with 4+ years of experience in building
-                                scalable web applications and automation systems.
-                            </p>
-                            <app-anchor cssclass="button" routerlink="/contact" label="Get in touch"></app-anchor>
+                        <div class="profile-box profile-box-content" appScrollReveal revealVariant="right">
+                            <div class="profile-box-text">
+                                <h1>Hi, I'm Ammar Yaqoob </h1>
+                                <h3>Backend & Cloud Engineer </h3>
+                                <p>Certified Cloud and Backend Engineer with 4+ years of experience in building
+                                    scalable web applications and automation systems.
+                                </p>
+                            </div>
+                            <div class="profile-box-actions">
+                                <app-anchor cssclass="button" routerlink="/contact" label="Get in touch"></app-anchor>
+                            </div>
                         </div>
-                        <div class="profile-box" appScrollReveal revealVariant="left" [revealDelay]="120">
+                        <div class="profile-box profile-box-media" appScrollReveal revealVariant="left" [revealDelay]="120">
                             <img alt="Ammar Yaqoob" class="rounded-1" src="./assets/images/Ammar-2.jpeg">
                         </div>
                     </div>

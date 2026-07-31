@@ -48,13 +48,13 @@
         <nav class="header-nav">
             <ul class="header-list">
                 <li class="header-item header-item_case studies">
-                    <a class="header-item__link" routerLink="/">Home</a>
+                    <a class="header-item__link" routerLink="/" (click)="closeMenu()">Home</a>
                 </li>
                 <li class="header-item header-item_case studies">
-                    <a class="header-item__link" routerLink="about">About</a>
+                    <a class="header-item__link" routerLink="about" (click)="closeMenu()">About</a>
                 </li>
                 <li class="header-item header-item_case studies">
-                    <a class="header-item__link" routerLink="portfolio">Portfolio</a>
+                    <a class="header-item__link" routerLink="portfolio" (click)="closeMenu()">Portfolio</a>
                 </li>
                 <li class="header-item header-item_dropdown header-item_services">
                     <input type="checkbox" id="header-checkbox-services" class="header-item__checkbox"
@@ -64,7 +64,7 @@
                         <div class="header-item-submenu">
                             <ul class="header-item-submenu-list">
                                 <li class="header-item-submenu-elem">
-                                    <a routerLink="./web-development" class="header-item-submenu-elem-link">
+                                    <a routerLink="./web-development" class="header-item-submenu-elem-link" (click)="closeMenu()">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -73,7 +73,7 @@
                                         </svg>Web Development</a>
                                 </li>
                                 <li class="header-item-submenu-elem">
-                                    <a routerLink="./custom-development" class="header-item-submenu-elem-link">
+                                    <a routerLink="./custom-development" class="header-item-submenu-elem-link" (click)="closeMenu()">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -84,7 +84,7 @@
                                 </li>
                                 <li class="header-item-submenu-elem">
                                     <a routerLink="./mobile-application-development"
-                                        class="header-item-submenu-elem-link">
+                                        class="header-item-submenu-elem-link" (click)="closeMenu()">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -98,7 +98,7 @@
                         <div class="header-item-submenu">
                             <ul class="header-item-submenu-list">
                                 <li class="header-item-submenu-elem">
-                                    <a routerLink="./seo" class="header-item-submenu-elem-link">
+                                    <a routerLink="./seo" class="header-item-submenu-elem-link" (click)="closeMenu()">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -134,7 +134,7 @@
                     </a>
                 </li> -->
             </ul>
-            <div class="header-contact"><a routerLink="contact" class="button button_secondary">Contact me</a></div>
+            <div class="header-contact"><a routerLink="contact" class="button button_secondary" (click)="closeMenu()">Contact me</a></div>
         </nav>
     </div>
 </header>

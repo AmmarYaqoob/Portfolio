@@ -25,6 +25,11 @@
   .header.text_black:not(.header_light) .header-burger span {
     background-color: #131a58 !important;
   }
+
+  .header-burger {
+    position: relative;
+    z-index: 60;
+  }
 }
 
 .header-checkbox__input:checked ~ .header-nav {

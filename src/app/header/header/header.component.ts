@@ -53,7 +53,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     const target = event.target as HTMLElement;
 
-    if (target.closest('.header-burger, label[for="top-menu-checkbox"]')) {
+    if (
+      target.id === 'top-menu-checkbox' ||
+      target.closest('.header-burger, label[for="top-menu-checkbox"]')
+    ) {
       return;
     }
 

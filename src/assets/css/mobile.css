@@ -30,7 +30,8 @@
   }
 
   .profile-box-media {
-    margin-top: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
   }
 
   .profile-box-media img,

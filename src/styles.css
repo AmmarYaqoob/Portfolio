@@ -30,8 +30,19 @@
 
 .profile-box img {
   width: 80%;
-  float: right;
   border-radius: 15px !important;
+}
+
+@media (min-width: 992px) {
+  .profile-box img {
+    float: right;
+  }
+}
+
+.profile-box-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .cases-item__caption.h4 {

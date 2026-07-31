@@ -1,3 +1,74 @@
+@media (max-width: 991px) {
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .profile-box-content,
+  .profile-box-media {
+    flex: none;
+    width: 100%;
+  }
+
+  .profile-box-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .profile-box-text,
+  .profile-box-actions {
+    flex: none;
+    width: 100%;
+  }
+
+  .profile-box-actions {
+    margin-top: 0;
+  }
+
+  .profile-box-media {
+    margin-top: 0.5rem;
+  }
+
+  .profile-box-media img,
+  .profile-box img {
+    width: min(100%, 280px);
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .profile-box-actions .button {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .profile-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "content media";
+    gap: 20px;
+    align-items: center;
+  }
+
+  .profile-box-content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-self: center;
+  }
+
+  .profile-box-media {
+    grid-area: media;
+    align-self: center;
+  }
+}
+
 @media (max-width: 767px) {
   html {
     -webkit-text-size-adjust: 100%;
@@ -28,49 +99,6 @@
   .home-hero p {
     font-size: 1rem;
     line-height: 1.6;
-  }
-
-  .profile-container {
-    flex-direction: column;
-    gap: 0;
-    margin-top: 2rem;
-  }
-
-  .profile-box-content,
-  .profile-box-media {
-    width: 100%;
-  }
-
-  .profile-box-content {
-    display: flex;
-    flex-direction: column;
-    order: 1;
-  }
-
-  .profile-box-text {
-    order: 1;
-  }
-
-  .profile-box-actions {
-    order: 2;
-    margin-top: 1.25rem;
-  }
-
-  .profile-box-media {
-    order: 3;
-    margin-top: 1.5rem;
-  }
-
-  .profile-box-media img,
-  .profile-box img {
-    width: min(100%, 280px);
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .profile-box-actions .button {
-    margin-bottom: 0.5rem;
   }
 
   .new .help-item,
@@ -213,19 +241,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .profile-container {
-    flex-direction: column;
-  }
-
-  .profile-box-content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .profile-box-media {
-    margin-top: 1.5rem;
-  }
-
   .profile-box-media img,
   .profile-box img {
     float: none;

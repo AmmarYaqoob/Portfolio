@@ -188,6 +188,196 @@ export const PORTFOLIO_DATA: any =
       }
     },
     {
+      slug: 'document-rag-assistant',
+      data: {
+        title: 'Document RAG Assistant',
+        description: 'Python RAG system that ingests large TXT, PDF, and DOCX files, builds a vector index, and answers chat questions strictly from uploaded documents.',
+        image: '../../../assets/images/job-automation-3.png',
+        links: {
+          live: '',
+          github: ''
+        },
+        hero: {
+          title: 'Document RAG Assistant',
+          country: 'Personal Project',
+          countryClass: 'usa',
+          techStack: [
+            'Python',
+            'FastAPI',
+            'MongoDB',
+            'LangChain',
+            'OpenAI',
+            'FAISS'
+          ],
+          description: [
+            'A retrieval-augmented generation (RAG) application built in Python for working with very large document collections. Users upload TXT, PDF, and DOCX files, the system extracts and chunks the content, stores embeddings in a vector database, and tracks file metadata in MongoDB so multiple documents can be managed in one workspace.',
+            'The chat interface answers questions using only retrieved context from the selected files, reducing hallucinations and keeping responses grounded in source material.'
+          ]
+        },
+        client_and_challenge: {
+          title: 'Problem & Challenge',
+          image: '../../../assets/images/job-automation-1.png',
+          description: [
+            'Teams often need to query long manuals, policies, and reports without reading hundreds of pages manually. Generic chatbots pull answers from general model knowledge, which is risky when accuracy must come from internal documents only.',
+            'The challenge was to support large files, multiple uploads per user, reliable parsing across formats, and a chat experience that refuses to answer when the requested information is not present in the indexed documents.'
+          ]
+        },
+        solution: {
+          title: 'Solution',
+          image: '../../../assets/images/job-automation-2.png',
+          description: [
+            'I built a Python backend with document loaders for TXT, PDF, and DOCX, text splitting for large files, and embedding generation stored in a vector database. MongoDB stores document metadata, processing status, chunk counts, and ownership so users can upload, re-index, and delete files independently.',
+            'At question time, the system retrieves the most relevant chunks, injects them into the prompt, and returns an answer constrained to that context. If retrieval confidence is low, the assistant responds that the answer is not available in the uploaded files.'
+          ]
+        },
+        feature: {
+          title: 'Features',
+          points: [
+            {
+              title: 'Multi-Format Ingestion',
+              description: 'Upload and parse large TXT, PDF, and DOCX files with automatic text extraction.'
+            },
+            {
+              title: 'Vector Indexing',
+              description: 'Chunk documents, generate embeddings, and store them for semantic search.'
+            },
+            {
+              title: 'MongoDB File Management',
+              description: 'Track multiple files per user with metadata, status, and version history.'
+            },
+            {
+              title: 'Grounded Chat',
+              description: 'Responses are generated only from retrieved document context, not open-ended model guesses.'
+            },
+            {
+              title: 'Source Citations',
+              description: 'Return the document name and snippet used to support each answer.'
+            },
+            {
+              title: 'Re-Indexing & Cleanup',
+              description: 'Replace, remove, or rebuild indexes when documents are updated.'
+            }
+          ]
+        },
+        services: {
+          title: 'Technologies Used',
+          description: [
+            {
+              icon: 'fa-brands fa-python',
+              text: 'Python Backend'
+            },
+            {
+              icon: 'fa-database',
+              text: 'MongoDB Metadata Store'
+            },
+            {
+              icon: 'fa-brain',
+              text: 'Vector Search & Embeddings'
+            },
+            {
+              icon: 'fa-comments',
+              text: 'RAG Chat Interface'
+            }
+          ]
+        }
+      }
+    },
+    {
+      slug: 'python-etl-analytics-pipeline',
+      data: {
+        title: 'Python ETL & Analytics Pipeline',
+        description: 'Automated Python data pipeline that ingests CSV, JSON, and API feeds, validates and transforms records, and loads curated datasets into MongoDB for reporting.',
+        image: '../../../assets/images/tcp-ip.png',
+        links: {
+          live: '',
+          github: ''
+        },
+        hero: {
+          title: 'Python ETL & Analytics Pipeline',
+          country: 'Personal Project',
+          countryClass: 'usa',
+          techStack: [
+            'Python',
+            'Pandas',
+            'FastAPI',
+            'MongoDB',
+            'APScheduler',
+            'Docker'
+          ],
+          description: [
+            'A Python ETL and analytics pipeline designed to collect data from CSV exports, JSON files, and REST APIs, clean and validate it with Pandas, and persist structured results in MongoDB for dashboards and downstream services.',
+            'The project includes scheduled jobs, retry handling, data quality checks, and export endpoints so processed datasets can be reused by other applications.'
+          ]
+        },
+        client_and_challenge: {
+          title: 'Problem & Challenge',
+          image: '../../../assets/images/crs.png',
+          description: [
+            'Many small teams receive data from multiple sources in inconsistent formats. Manual spreadsheet cleanup is slow, error-prone, and difficult to repeat daily.',
+            'The challenge was to build a reliable Python pipeline that normalizes incoming records, catches bad data early, stores history in MongoDB, and produces analytics-ready collections without manual intervention.'
+          ]
+        },
+        solution: {
+          title: 'Solution',
+          image: '../../../assets/images/shipping-1.jpg',
+          description: [
+            'I implemented modular extract, transform, and load stages in Python. Extractors pull from files and APIs, transformers apply schema validation, deduplication, and business rules with Pandas, and loaders upsert records into MongoDB collections designed for reporting.',
+            'APScheduler runs recurring imports, while FastAPI exposes health checks, manual run triggers, and summary endpoints for the latest processed batches.'
+          ]
+        },
+        feature: {
+          title: 'Features',
+          points: [
+            {
+              title: 'Multi-Source Ingestion',
+              description: 'Import data from CSV, JSON, and REST APIs through reusable connectors.'
+            },
+            {
+              title: 'Validation Rules',
+              description: 'Schema checks, null detection, type coercion, and duplicate handling before load.'
+            },
+            {
+              title: 'MongoDB Storage',
+              description: 'Persist raw, cleaned, and aggregated collections for flexible querying.'
+            },
+            {
+              title: 'Scheduled Jobs',
+              description: 'Automated recurring pipeline runs with retry and failure logging.'
+            },
+            {
+              title: 'Analytics Exports',
+              description: 'Generate summary metrics and export curated datasets for dashboards.'
+            },
+            {
+              title: 'API Control Layer',
+              description: 'FastAPI endpoints to trigger runs, inspect job status, and fetch processed results.'
+            }
+          ]
+        },
+        services: {
+          title: 'Technologies Used',
+          description: [
+            {
+              icon: 'fa-brands fa-python',
+              text: 'Python ETL Pipeline'
+            },
+            {
+              icon: 'fa-table',
+              text: 'Pandas Transformations'
+            },
+            {
+              icon: 'fa-database',
+              text: 'MongoDB Data Store'
+            },
+            {
+              icon: 'fa-clock',
+              text: 'Scheduled Processing'
+            }
+          ]
+        }
+      }
+    },
+    {
       slug: 'crs',
       data: {
         title: 'CRS',

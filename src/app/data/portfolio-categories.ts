@@ -2,7 +2,8 @@ export type PortfolioCategory =
   | 'mobile-app'
   | 'management-tools'
   | 'ui'
-  | 'server-handling';
+  | 'server-handling'
+  | 'python';
 
 export interface PortfolioFilter {
   id: 'all' | PortfolioCategory;
@@ -11,6 +12,7 @@ export interface PortfolioFilter {
 
 export const PORTFOLIO_FILTERS: PortfolioFilter[] = [
   { id: 'all', label: 'All' },
+  { id: 'python', label: 'Python' },
   { id: 'mobile-app', label: 'Mobile App' },
   { id: 'management-tools', label: 'Management Tools' },
   { id: 'ui', label: 'UI' },
@@ -22,6 +24,7 @@ export const PORTFOLIO_CATEGORY_LABELS: Record<PortfolioCategory, string> = {
   'management-tools': 'Management Tools',
   'ui': 'UI',
   'server-handling': 'Server Handling',
+  'python': 'Python',
 };
 
 /** Category tags per project slug */
@@ -36,4 +39,6 @@ export const PORTFOLIO_CATEGORIES: Record<string, PortfolioCategory[]> = {
   'rockway': ['mobile-app', 'ui'],
   'serverless-event-pipeline': ['server-handling'],
   'rate-limiter': ['server-handling'],
+  'document-rag-assistant': ['python', 'management-tools', 'server-handling'],
+  'python-etl-analytics-pipeline': ['python', 'server-handling', 'management-tools'],
 };
